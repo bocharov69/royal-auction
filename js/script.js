@@ -32,5 +32,5 @@ document.addEventListener('DOMContentLoaded', function () {
     //header menu language icon change
     var user_lang = navigator.language || navigator.userLanguage;
     console.log(user_lang);
-    document.getElementById('header__menu-link--language').style = `background: url('/img/icons/languages/${user_lang}.svg') center / contain no-repeat;`
+    document.getElementById('header__menu-link--language').style = `background: url('./img/icons/languages/${user_lang}.svg') center / contain no-repeat;`
 });
