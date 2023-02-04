@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
 }
-.row1__col2 .circle-progress-text {
+.row1__col2 .circle-graph-progress-text {
   font-weight: 500;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.4);
@@ -288,10 +288,10 @@
   justify-content: space-between;
 }
 .row3__col3 {
-  background: url("../../img/roto_big.svg") 85% bottom/contain no-repeat, #171a1e;
+  background: url("../img/roto_big.svg") 85% bottom/contain no-repeat, #171a1e;
 }
 .row3__col4 {
-  background: url("../../img/ruble_big.svg") 85% bottom/contain no-repeat, #171a1e;
+  background: url("../img/ruble_big.svg") 85% bottom/contain no-repeat, #171a1e;
 }
 
 .row4 {
