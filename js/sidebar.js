@@ -12,7 +12,7 @@ document.write(`<aside class="sidebar">
                 <li>
                     <a href="index.html" class="sidebar__menu-item" id="sidebar__menu-link--main">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/main.svg" alt="">
+                            <img src="./img/icons/nav/main.svg" alt="">
                         </div>
                         Главная
                     </a>
@@ -20,7 +20,7 @@ document.write(`<aside class="sidebar">
                 <li>
                     <a href="profile.html" class="sidebar__menu-item" id="sidebar__menu-link--profile">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/profile.svg" alt="">
+                            <img src="./img/icons/nav/profile.svg" alt="">
                         </div>
                         Профиль
                     </a>
@@ -28,7 +28,7 @@ document.write(`<aside class="sidebar">
                 <li>
                     <a href="tockens.html" class="sidebar__menu-item is-hascounter" id="sidebar__menu-link--tockens">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/tockens.svg" alt="">
+                            <img src="./img/icons/nav/tockens.svg" alt="">
                         </div>
                         Токены
                         <div class="unread"></div>
@@ -38,7 +38,7 @@ document.write(`<aside class="sidebar">
                 <li>
                     <a href="auctions.html" class="sidebar__menu-item" id="sidebar__menu-link--auctions">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/auctions.svg" alt="">
+                            <img src="./img/icons/nav/auctions.svg" alt="">
                         </div>
                         Аукционы
                     </a>
@@ -47,7 +47,7 @@ document.write(`<aside class="sidebar">
                     <a href="myauctions.html" class="sidebar__menu-item is-unread is-hascounter"
                         id="sidebar__menu-link--myauctions">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/myauctions.svg" alt="">
+                            <img src="./img/icons/nav/myauctions.svg" alt="">
                         </div>
                         Мои аукционы
                         <div class="unread"></div>
@@ -57,7 +57,7 @@ document.write(`<aside class="sidebar">
                 <li>
                     <a href="winers.html" class="sidebar__menu-item" id="sidebar__menu-link--winers">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/winers.svg" alt="">
+                            <img src="./img/icons/nav/winers.svg" alt="">
                         </div>
                         Лента победителей
                     </a>
@@ -65,7 +65,7 @@ document.write(`<aside class="sidebar">
                 <li>
                     <a href="referal.html" class="sidebar__menu-item" id="sidebar__menu-link--referal">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/referal.svg" alt="">
+                            <img src="./img/icons/nav/referal.svg" alt="">
                         </div>
                         Партнерская программа
                     </a>
@@ -74,7 +74,7 @@ document.write(`<aside class="sidebar">
                     <a href="news.html" class="sidebar__menu-item is-unread is-hascounter"
                         id="sidebar__menu-link--news">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/news.svg" alt="">
+                            <img src="./img/icons/nav/news.svg" alt="">
                         </div>
                         Новости
                         <div class="unread"></div>
@@ -85,7 +85,7 @@ document.write(`<aside class="sidebar">
                     <a href="notifications.html" class="sidebar__menu-item is-unread is-hascounter"
                         id="sidebar__menu-link--notifications">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/notifications.svg" alt="">
+                            <img src="./img/icons/nav/notifications.svg" alt="">
                         </div>
                         Уведомления
                         <div class="unread"></div>
@@ -95,7 +95,7 @@ document.write(`<aside class="sidebar">
                 <li>
                     <a href="faq.html" class="sidebar__menu-item" id="sidebar__menu-link--faq">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/faq.svg" alt="">
+                            <img src="./img/icons/nav/faq.svg" alt="">
                         </div>
                         Частые вопросы
                     </a>
@@ -103,7 +103,7 @@ document.write(`<aside class="sidebar">
                 <li>
                     <a href="support.html" class="sidebar__menu-item" id="sidebar__menu-link--support">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/support.svg" alt="">
+                            <img src="./img/icons/nav/support.svg" alt="">
                         </div>
                         Техподдержка
                     </a>
@@ -113,7 +113,7 @@ document.write(`<aside class="sidebar">
 
         <button class="sidebar__referal-btn">
             <div class="sidebar__referal-btn-img">
-                <img src="./img/icons/copy_link.svg" alt="">
+                <img src="./img/icons/nav/copy_link.svg" alt="">
             </div>
             Партнерская ссылка
         </button>

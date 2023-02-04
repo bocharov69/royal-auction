@@ -15,7 +15,7 @@ document.write(`<header class="header">
             <li class="header__menu-item-wrapper">
                 <a href="notifications.html" class="header__menu-item is-unread" id="header__menu-link--notifications">
                     <div class="header__menu-item-img">
-                        <img src="./img/icons/notifications.svg" alt="">
+                        <img src="./img/icons/nav/notifications.svg" alt="">
                     </div>
                     <div class="unread"></div>
                 </a>
@@ -23,15 +23,15 @@ document.write(`<header class="header">
             <li class="header__menu-item-wrapper">
                 <a href="profile.html" class="header__menu-item" id="header__menu-link--profile">
                     Nickname
-                    <div class="header__menu-item-img">
-                        <img src="./img/avatar.png" alt="">
+                    <div class="header__menu-item-img user-avatar-wrapper">
+                        <img src="./img/avatar.png" alt="Ava" class="user-avatar">
                     </div>
                 </a>
             </li>
             <li class="header__menu-item-wrapper">
                 <a href="##" class="header__menu-item" id="header__menu-link--logout">
                     <div class="header__menu-item-img">
-                        <img src="./img/icons/logout.svg" alt="">
+                        <img src="./img/icons/nav/logout.svg" alt="">
                     </div>
                 </a>
             </li>
