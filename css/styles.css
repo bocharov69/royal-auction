@@ -207,6 +207,9 @@ h6 {
   padding: 12px 8%;
   color: #fff;
 }
+.gray-btn:visited {
+  color: #fff;
+}
 
 .tooltip {
   position: relative;
@@ -254,16 +257,15 @@ h6 {
   border-left: 10px solid transparent;
 }
 
+.line-separator {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
 .circle-graph {
   display: flex;
   justify-content: space-around;
   align-items: start;
   margin: 65px 0 30px;
-}
-.circle-graph-block {
-  background: #171a1e;
-  border-radius: 17px;
-  padding: 25px;
 }
 .circle-graph-heading p {
   display: flex;
@@ -325,8 +327,100 @@ h6 {
   color: #fff;
 }
 
-.line-separator {
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+.barchart {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.barchart-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #171A1E;
+  padding: 0px 15px 40px 55px;
+}
+.barchart-wrapper > .line-separator {
+  margin-left: -55px;
+}
+.barchart-nav {
+  display: flex;
+  align-items: center;
+  margin: 0 0 25px -55px;
+}
+.barchart-nav-title {
+  margin-right: 30px;
+}
+.barchart-nav-select {
+  margin: 0 5px 0 auto;
+  font-size: 12px;
+  background: none;
+  color: #cacaca;
+  cursor: pointer;
+}
+.barchart-nav-option {
+  color: #000;
+}
+.barchart-nav-radio {
+  display: flex;
+  align-items: center;
+  margin-left: 45px;
+}
+.barchart-nav-radio-label {
+  position: relative;
+  font-size: 12px;
+  color: #cacaca;
+  cursor: pointer;
+}
+.barchart-nav-radio-label:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+.barchart-nav-radio-btn {
+  visibility: hidden;
+  width: 0;
+}
+.barchart-nav-radio-btn#profile__barchart-currency--roto + label:before {
+  -webkit-filter: invert(27%) sepia(94%) saturate(4436%) hue-rotate(230deg) brightness(102%) contrast(102%);
+          filter: invert(27%) sepia(94%) saturate(4436%) hue-rotate(230deg) brightness(102%) contrast(102%);
+}
+.barchart-nav-radio-btn#profile__barchart-currency--rubble + label:before {
+  -webkit-filter: invert(72%) sepia(91%) saturate(1535%) hue-rotate(101deg) brightness(103%) contrast(101%);
+          filter: invert(72%) sepia(91%) saturate(1535%) hue-rotate(101deg) brightness(103%) contrast(101%);
+}
+.barchart-nav-radio-btn:checked + label:before {
+  background: url(../../img/icons/checkboxes/checkmark.svg) center/contain no-repeat;
+}
+.barchart-heading {
+  display: flex;
+  margin: 25px 0 50px -55px;
+  justify-content: space-between;
+}
+.barchart-heading-legend {
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+.barchart-heading-legend:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid;
+  margin-right: 8px;
+}
+.barchart-heading-total, .barchart-heading-total span {
+  color: #f2ae14;
 }
 
 @media (max-width: 1279px) {

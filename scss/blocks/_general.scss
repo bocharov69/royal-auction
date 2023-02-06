@@ -134,6 +134,9 @@ h6 {
     border-radius: 8px;
     padding: 12px 8%;
     color: #fff;
+    &:visited {
+        color: #fff;
+    }
 }
 .tooltip {
     position: relative;
@@ -178,17 +181,16 @@ h6 {
     }
 }
 
+.line-separator {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
 .circle-graph {
     display: flex;
     justify-content: space-around;
     align-items: start;
     margin: 65px 0 30px;
 
-    &-block {
-        background: #171a1e;
-        border-radius: 17px;
-        padding: 25px;
-    }
     &-heading p {
         display: flex;
         justify-content: space-between;
@@ -252,8 +254,99 @@ h6 {
     }
 }
 
-.line-separator {
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
+.barchart {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background: #171A1E;
+        padding: 0px 15px 40px 55px;
+        &>.line-separator {
+            margin-left: -55px;
+        }
+    }
+    &-nav {
+        display: flex;
+        align-items: center;
+        margin: 0 0 25px -55px;
+        &-title {
+            margin-right: 30px;
+        }
+        &-select {
+            margin: 0 5px 0 auto;
+            font-size: 12px;
+            background: none;
+            color: #cacaca;
+            cursor: pointer;
+        }
+        &-option {
+            color: #000;
+        }
+        &-radio {
+            display: flex;
+            align-items: center;
+            margin-left: 45px;
+            &-label {
+                position: relative;
+                font-size: 12px;
+                color: #cacaca;
+                cursor: pointer;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    left: -20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border: 2px solid #000;
+                    border-radius: 5px;
+                }
+            }
+            &-btn {
+                visibility: hidden;
+                width: 0;
+                &#profile__barchart-currency--roto + label:before {
+                    filter: invert(27%) sepia(94%) saturate(4436%) hue-rotate(230deg) brightness(102%) contrast(102%);
+                }
+                &#profile__barchart-currency--rubble + label:before {
+                    filter: invert(72%) sepia(91%) saturate(1535%) hue-rotate(101deg) brightness(103%) contrast(101%);
+                }
+                &:checked + label:before {
+                    background: url(../../img/icons/checkboxes/checkmark.svg) center / contain no-repeat;
+                }
+            }
+        }
+    }
+    &-heading {
+        display: flex;
+        margin: 25px 0 50px -55px;
+        justify-content: space-between;
+        &-legend {
+            font-weight: 500;
+            position: relative;
+            display: flex;
+            align-items: end;
+            &:before {
+                content: "";
+                display: inline-block;
+                position: relative;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 8px solid;
+                margin-right: 8px;
+            }
+        }
+        &-total,
+        &-total span {
+            color: #f2ae14;
+        }
+    }
 }
 
 @media (max-width: 1279px) {

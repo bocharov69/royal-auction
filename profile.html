@@ -34,8 +34,8 @@
                         </div>
                         <div class="row1__col2">
                             <div class="row1__col2__circle-graph-progress circle-graph-progress">
-                                <svg class="circle-graph-progress-bar" width="88" height="88" viewBox="0 0 88 88" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg class="circle-graph-progress-bar" width="88" height="88" viewBox="0 0 88 88"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M85 44C85 66.6436 66.6437 85 44 85C21.3563 85 3 66.6436 3 44C3 21.3563 21.3563 3 44 3C66.6437 3 85 21.3563 85 44Z"
                                         stroke="white" stroke-opacity="0.07" stroke-width="6" />
@@ -339,7 +339,35 @@
                             </div>
                         </div>
                         <div class="row4__col2">
-                            <canvas id="user-profit-chart"></canvas>
+                            <div class="barchart-wrapper">
+                                <div class="barchart-nav">
+                                    <p class="barchart-nav-title">Прибыль</p>
+                                    <select class="barchart-nav-select">
+                                        <option value="week" class="barchart-nav-option">За последнюю неделю</option>
+                                        <option value="month" class="barchart-nav-option">За последний месяц</option>
+                                    </select>
+                                    <div class="barchart-nav-radio">
+                                        <input type="radio" name="currency" id="profile__barchart-currency--roto"
+                                            value="roto" class="barchart-nav-radio-btn" checked>
+                                        <label for="profile__barchart-currency--roto"
+                                            class="barchart-nav-radio-label">ROTO</label>
+                                    </div>
+                                    <div class="barchart-nav-radio">
+                                        <input type="radio" name="currency" id="profile__barchart-currency--rubble"
+                                            value="rubble" class="barchart-nav-radio-btn">
+                                        <label for="profile__barchart-currency--rubble"
+                                            class="barchart-nav-radio-label">Рубли</label>
+                                    </div>
+                                </div>
+                                <div class="line-separator"></div>
+                                <div class="barchart-heading">
+                                    <p class="barchart-heading-legend"></p>
+                                    <p class="barchart-heading-total">Всего заработано за период: <span
+                                            class="barchart-heading-total-span"></span></p>
+                                </div>
+                                <div class="barchart">
+                                </div>
+                            </div>
                         </div>
                     </article>
                 </section>
@@ -348,7 +376,6 @@
             </main>
         </div>
     </div>
-    <script src="./node_modules/chart.js/dist/chart.umd.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/profile.js"></script>
 </body>

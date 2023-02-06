@@ -295,19 +295,20 @@
 }
 
 .row4 {
-  margin: 50px 0;
+  margin: 30px -15px;
   display: flex;
+  flex-wrap: wrap;
 }
-.row4__col1 {
-  flex: 1 1 50%;
-  margin-bottom: 20px;
+.row4__col1, .row4__col2 {
+  flex: 1 1 40%;
+  margin: 20px 15px;
+  background: #171a1e;
+  border-radius: 17px;
+  padding: 25px;
 }
 .row4__col2 {
-  flex: 1 1 50%;
-}
-.row4__col2 #user-profit-chart {
-  width: 100%;
-  height: 100%;
+  position: relative;
+  height: 400px;
 }
 
 @media (max-width: 1279px) {
