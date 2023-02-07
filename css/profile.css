@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
 }
-.row1__col2 .circle-graph-progress-text {
+.row1__col2 .donutchart-text {
   font-weight: 500;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.4);

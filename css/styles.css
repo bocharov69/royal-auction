@@ -261,25 +261,31 @@ h6 {
   border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-.circle-graph {
-  display: flex;
-  justify-content: space-around;
-  align-items: start;
-  margin: 65px 0 30px;
+.donutchart {
+  position: relative;
+  display: inline-block;
 }
-.circle-graph-heading p {
+.donutchart-heading {
+  margin-bottom: 35px;
+}
+.donutchart-heading p {
   display: flex;
   justify-content: space-between;
 }
-.circle-graph-ul-item {
+.donutchart-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+.donutchart-ul-item {
   position: relative;
   display: flex;
   align-items: start;
 }
-.circle-graph-ul-item:not(.circle-graph-ul-item:first-child) {
+.donutchart-ul-item:not(.donutchart-ul-item:first-child) {
   margin-top: 25px;
 }
-.circle-graph-ul-item:before {
+.donutchart-ul-item:before {
   content: "";
   position: relative;
   display: inline-block;
@@ -289,34 +295,30 @@ h6 {
   overflow: hidden;
   border: 3px solid;
 }
-.circle-graph-ul-item:nth-child(1):before {
+.donutchart-ul-item:nth-child(1):before {
   border-color: #00ffa3;
 }
-.circle-graph-ul-item:nth-child(2):before {
+.donutchart-ul-item:nth-child(2):before {
   border-color: #2f53ff;
 }
-.circle-graph-ul-item:nth-child(3):before {
+.donutchart-ul-item:nth-child(3):before {
   border-color: rgba(255, 255, 255, 0.1215686275);
 }
-.circle-graph-ul-item:nth-child(4):before {
+.donutchart-ul-item:nth-child(4):before {
   border-color: #fff;
 }
-.circle-graph-ul-item-number {
+.donutchart-ul-item-number {
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 5px;
 }
-.circle-graph-ul-item-description {
+.donutchart-ul-item-description {
   font-weight: 300;
   font-size: 12px;
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.4);
 }
-.circle-graph-progress {
-  position: relative;
-  display: inline-block;
-}
-.circle-graph-progress-text {
+.donutchart-text {
   font-weight: 300;
   font-size: 28px;
   position: absolute;
@@ -337,7 +339,7 @@ h6 {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: #171A1E;
+  background: #171a1e;
   padding: 0px 15px 40px 55px;
 }
 .barchart-wrapper > .line-separator {
@@ -409,6 +411,7 @@ h6 {
   position: relative;
   display: flex;
   align-items: end;
+  margin-right: 10px;
 }
 .barchart-heading-legend:before {
   content: "";
@@ -441,6 +444,26 @@ h6 {
   .circle-graph-progress-bar {
     max-width: 120px;
     max-height: 120px;
+  }
+}
+@media (max-width: 424px) {
+  .barchart-wrapper {
+    padding-right: 0;
+    padding-left: 35px;
+  }
+  .barchart-nav {
+    flex-wrap: wrap;
+    padding-left: 25px;
+  }
+  .barchart-nav-title {
+    margin-right: 5px;
+  }
+  .barchart-nav-radio {
+    flex: 0 1 100%;
+    margin: 12px 0 0 20px;
+  }
+  .barchart-heading {
+    padding-left: 25px;
   }
 }
 .sidebar {

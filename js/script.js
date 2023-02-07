@@ -29,12 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
-
     //header menu language icon change
     var user_lang = navigator.language || navigator.userLanguage;
     document.getElementById('header__menu-link--language').style = `background: url('./img/icons/languages/${user_lang}.svg') center / contain no-repeat;`
 
+    
 
     //barchart !!(required defined width and height on main parent (parent of barchart-wrapper))
     var barchart = document.querySelector('.barchart');
