@@ -330,7 +330,7 @@
                                     <div class="donutchart-container">
                                         <div class="donutchart">
                                             <svg width="185" height="183" viewBox="0 0 185 183" fill="none"
-                                                class="circle-graph-progress-bar" xmlns="http://www.w3.org/2000/svg">
+                                                xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M118.778 15.3902C120.781 9.61166 117.693 3.24043 111.707 1.98763C100.525 -0.352631 88.9664 -0.635559 77.6204 1.18759C62.6068 3.6001 48.4284 9.62589 36.341 18.7312C24.2537 27.8365 14.6305 39.7403 8.324 53.3882C2.01746 67.036 -0.77782 82.0067 0.18577 96.974C1.14936 111.941 5.84207 126.443 13.8482 139.196C21.8544 151.948 32.9269 162.556 46.0849 170.082C59.2429 177.607 74.0804 181.818 89.2829 182.339C100.753 182.733 112.165 181.017 122.942 177.314C128.744 175.321 131.009 168.587 128.276 163.095C125.586 157.689 119.06 155.546 113.285 157.311C105.796 159.6 97.9457 160.643 90.0583 160.372C78.5198 159.976 67.2585 156.781 57.2718 151.069C47.2851 145.358 38.8813 137.306 32.8047 127.627C26.7282 117.948 23.1665 106.942 22.4351 95.5817C21.7038 84.2217 23.8254 72.8593 28.6119 62.5008C33.3985 52.1423 40.7023 43.1076 49.8763 36.1968C59.0504 29.286 69.8116 24.7125 81.2067 22.8815C88.9952 21.63 96.9156 21.6861 104.637 23.0223C110.59 24.0525 116.799 21.0983 118.778 15.3902Z"
                                                     fill="white" fill-opacity="0.12" />
@@ -356,16 +356,14 @@
                                         <option value="month" class="barchart-nav-option">За последний месяц</option>
                                     </select>
                                     <div class="barchart-nav-radio">
-                                        <input type="radio" name="currency" id="profile__barchart-currency--roto"
-                                            value="roto" class="barchart-nav-radio-btn" checked>
-                                        <label for="profile__barchart-currency--roto"
-                                            class="barchart-nav-radio-label">ROTO</label>
+                                        <input type="radio" name="currency" value="roto" checked
+                                            class="barchart-nav-radio-btn currency--roto" >
+                                        <label class="barchart-nav-radio-label">ROTO</label>
                                     </div>
                                     <div class="barchart-nav-radio">
-                                        <input type="radio" name="currency" id="profile__barchart-currency--rubble"
-                                            value="rubble" class="barchart-nav-radio-btn">
-                                        <label for="profile__barchart-currency--rubble"
-                                            class="barchart-nav-radio-label">Рубли</label>
+                                        <input type="radio" name="currency" value="rubble"
+                                            class="barchart-nav-radio-btn currency--rubble">
+                                        <label class="barchart-nav-radio-label">Рубли</label>
                                     </div>
                                 </div>
                                 <div class="line-separator"></div>
@@ -386,7 +384,15 @@
         </div>
     </div>
     <script src="./js/script.js"></script>
-    <script src="./js/profile.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var checkbox_items = document.querySelectorAll('.row2__col2__checklist-item');
+            checkbox_items.forEach(element => {
+                if (element.classList.contains('is-checked'))
+                    element.querySelector('.row2__col2__checklist-item-img').src = "./img/icons/checkboxes/checked.svg";
+            });
+        });
+    </script>
 </body>
 
 </html>
