@@ -71,7 +71,7 @@
 .row3 {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px -10px;
+  margin: 20px -10px 40px;
 }
 .row3__col {
   position: relative;
@@ -209,6 +209,29 @@
 .settings-usernotifications-item label {
   margin: 0 0 0 12px;
   color: rgba(255, 255, 255, 0.4);
+}
+.settings-passchange {
+  margin: -15px;
+}
+.settings-cardchange {
+  margin: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.settings-cardchange-item {
+  flex: 1 1 40%;
+}
+.settings-cardchange-item input {
+  width: 100%;
+}
+.settings-cardchange-item input#settings-cardchange--cardexp {
+  letter-spacing: 0.2em;
+}
+.settings-cardchange-item:first-child {
+  flex: 1 1 100%;
+}
+.settings-cardchange-item:nth-child(2) {
+  max-width: 95px;
 }
 
 .status-label {

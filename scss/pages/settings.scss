@@ -80,7 +80,7 @@
 .row3 {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px -10px;
+    margin: 20px -10px 40px;
 
     &__col {
         position: relative;
@@ -141,6 +141,7 @@
         }
     }
 }
+
 
 .settings {
     &-heading {
@@ -213,6 +214,30 @@
             label {
                 margin: 0 0 0 12px;
                 color: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+
+    &-passchange {
+        margin: -15px;
+    }
+    &-cardchange {
+        margin: -15px;
+        display: flex;
+        flex-wrap: wrap;
+        &-item {
+            flex: 1 1 40%;
+            input {
+                width: 100%
+            }
+            input#settings-cardchange--cardexp {
+                letter-spacing: 0.2em;
+            }   
+            &:first-child {
+                flex: 1 1 100%;
+            }
+            &:nth-child(2) {
+                max-width: 95px;
             }
         }
     }

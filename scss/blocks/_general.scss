@@ -49,6 +49,40 @@ h6 {
     color: #fff;
 }
 
+.modal-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw ;
+    height: 100% ;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    overflow: auto;
+    display: none;
+    &.is-active {
+        display: block;
+    }
+}
+.modal {
+    background: #121416 radial-gradient(circle, rgba(75,115,255,0.2) 0%, rgba(0,0,0,0) 100%);
+    box-shadow: 0px 4px 20px #000000;
+    border-radius: 15px;
+    padding: 45px 45px 35px;
+    width: 430px !important;
+    max-width: 90vw;
+    margin: auto;
+    z-index: 1001;
+    .line-separator {
+        margin-bottom: 40px;
+    }
+    .system-msg {
+        margin: 30px 0 0;
+    }
+    .submit-btn {
+        width: 100%;
+        margin-top: 45px;
+    }
+}
 .logo {
     display: flex;
     align-items: center;
@@ -71,7 +105,20 @@ h6 {
         line-height: 1.2;
     }
 }
-
+.submit-btn {
+    font-size: 15px;
+    font-weight: 300;
+    padding: 15px 10%;
+    color: #fff;
+    background: #2F53FF;
+    display: inline-block;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0px 4px 15px -2px #2f52ffbd;
+    }
+}
 .unread {
     display: none;
     align-self: flex-start;
