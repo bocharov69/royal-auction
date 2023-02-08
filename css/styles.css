@@ -184,7 +184,7 @@ h6 {
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 .page__tab-btn.is-active {
-  background: #2F53FF;
+  background: #2f53ff;
   border: none;
 }
 
@@ -193,6 +193,37 @@ h6 {
   top: 27px;
   left: 0;
   font-size: 32px;
+}
+
+.system-msg {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+.form-item label {
+  font-weight: 300;
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-item input {
+  background: rgba(92, 92, 92, 0.14);
+  border-radius: 5px;
+  color: #fff;
+  padding: 12px 17px;
+  transition: 0.3s ease;
+}
+.form-item input:hover {
+  box-shadow: 0px 2px 15px -2px rgba(0, 0, 0, 0.7);
 }
 
 .status-label {
@@ -253,9 +284,16 @@ h6 {
 }
 
 .tooltip {
+  z-index: 10;
   position: relative;
   display: inline-block;
   cursor: pointer;
+  min-width: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  max-height: 16px;
+  margin-left: 10px;
+  background: url("../../img/icons/tooltip_icon.svg") center/contain no-repeat;
 }
 .tooltip:hover .tooltip-text {
   visibility: visible;
@@ -300,6 +338,12 @@ h6 {
 
 .line-separator {
   border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.row__col {
+  background: #171a1e;
+  border-radius: 17px;
+  padding: 25px;
 }
 
 .donutchart {
@@ -368,6 +412,17 @@ h6 {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #fff;
+}
+
+.user-country-select {
+  font-size: 0;
+  padding: 10px 45px 10px 0px !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  overflow: hidden;
+}
+.user-country-select option {
+  font-size: 12px !important;
+  color: #000 !important;
 }
 
 .barchart {
@@ -439,7 +494,7 @@ h6 {
           filter: invert(72%) sepia(91%) saturate(1535%) hue-rotate(101deg) brightness(103%) contrast(101%);
 }
 .barchart-nav-radio-btn:checked + label:before {
-  background: url(../../img/icons/checkboxes/checkmark.svg) center/contain no-repeat;
+  background: url(../img/icons/checkboxes/checkmark.svg) center/contain no-repeat;
 }
 .barchart-heading {
   display: flex;

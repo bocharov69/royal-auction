@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //sidebar menu current page highlight
     const current_page = document.querySelector('.page').id;
     const current_page_link = document.getElementById(`sidebar__menu-link--${current_page}`);
-    current_page_link.classList.add("is-active");
+    if (current_page_link)
+        current_page_link.classList.add("is-active");
 
     //sidebar menu collapse on 1279px
     const sidebar = document.querySelector(".sidebar");
@@ -33,34 +34,49 @@ document.addEventListener('DOMContentLoaded', function () {
     var user_lang = navigator.language || navigator.userLanguage;
     document.getElementById('header__menu-link--language').style = `background: url('./img/icons/languages/${user_lang}.svg') center / contain no-repeat;`
 
+    //user country select
+    var country_select = document.querySelector('.user-country-select');
+    var country_value = this.documentElement.querySelectorAll('.user-country-value');
+    country_select.style = `background: url("../../img/icons/flags/${country_select.value}.png") left center / 40px 20px no-repeat;`
+    country_value.forEach(element => {
+        element.textContent = document.querySelector(`.user-country-option[value="${country_select.value}"]`).textContent;
+    });
+    country_select.addEventListener("change" , function() {
+        country_select.style = `background: url("../../img/icons/flags/${country_select.value}.png") left center / 40px 20px no-repeat;`
+        country_value.forEach(element => {
+            element.textContent = document.querySelector(`.user-country-option[value="${country_select.value}"]`).textContent;
+        });
+    });
+    
     //page tab change
     var page_tab_btns = document.querySelectorAll('.page__tab-btn');
 
-    for (let i = 0; i < page_tab_btns.length; i++) {
-        var id = page_tab_btns[i].getAttribute("for");
+    if (page_tab_btns.length > 0) {
+        for (let i = 0; i < page_tab_btns.length; i++) {
+            var id = page_tab_btns[i].getAttribute("for");
 
-        if (page_tab_btns[i].classList.contains('is-active')) {
-            document.getElementById(id).classList.add('is-active');
-        } else
-            document.getElementById(id).classList.remove('is-active');
+            if (page_tab_btns[i].classList.contains('is-active')) {
+                document.getElementById(id).classList.add('is-active');
+            } else
+                document.getElementById(id).classList.remove('is-active');
 
-        page_tab_btns[i].addEventListener("click", function (e) {
-            var other_tab;
-            id = e.target.getAttribute("for");
-            if (page_tab_btns[i - 1])
-                other_tab = page_tab_btns[i - 1];
-            else if (page_tab_btns[i + 1])
-                other_tab = page_tab_btns[i + 1];
-            console.log(other_tab);
-            if (other_tab.classList.contains('is-active')) {
-                document.getElementById(other_tab.getAttribute("for")).classList.remove('is-active');
-                other_tab.classList.remove('is-active');
-            }
-            document.getElementById(id).classList.add('is-active');
-            e.target.classList.add('is-active');
-        });
+            page_tab_btns[i].addEventListener("click", function (e) {
+                var other_tab;
+                id = e.target.getAttribute("for");
+                if (page_tab_btns[i - 1])
+                    other_tab = page_tab_btns[i - 1];
+                else if (page_tab_btns[i + 1])
+                    other_tab = page_tab_btns[i + 1];
+                console.log(other_tab);
+                if (other_tab.classList.contains('is-active')) {
+                    document.getElementById(other_tab.getAttribute("for")).classList.remove('is-active');
+                    other_tab.classList.remove('is-active');
+                }
+                document.getElementById(id).classList.add('is-active');
+                e.target.classList.add('is-active');
+            });
+        }
     }
-
 
     //barchart !!(required defined width and height on main parent (parent of barchart-wrapper))
     var barcharts = document.querySelectorAll('.barchart');

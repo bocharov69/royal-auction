@@ -47,21 +47,13 @@
   font-size: 18px;
   color: rgba(255, 255, 255, 0.4);
 }
-.row1__col2 .tooltip {
-  min-width: 16px;
-  max-width: 16px;
-  min-height: 16px;
-  max-height: 16px;
-  margin-left: 10px;
-  background: url("../../img/icons/tooltip_icon.svg") center/contain no-repeat;
-}
 
 .row2 {
   display: flex;
   margin-top: 25px;
-  padding: 25px;
-  background: #171a1e;
+  background: #171A1E;
   border-radius: 17px;
+  padding: 25px;
   max-width: calc(100vw - 385px);
   overflow: auto;
   scrollbar-width: none;
@@ -170,11 +162,6 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 170px 235px;
   grid-gap: 18px;
-}
-.row3__col {
-  background: #171a1e;
-  border-radius: 17px;
-  padding: 25px;
 }
 .row3__card {
   border-radius: 17px;
@@ -302,9 +289,6 @@
 .row4__col1, .row4__col2 {
   flex: 1 1 40%;
   margin: 20px 15px;
-  background: #171a1e;
-  border-radius: 17px;
-  padding: 25px;
 }
 .row4__col2 {
   position: relative;

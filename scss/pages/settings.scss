@@ -1,0 +1,237 @@
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+
+    .row__col {
+        margin: 10px;
+    }
+
+    &__col1 {
+        flex: 1 1 65%;
+        padding: 30px 40px 25px;
+    }
+
+    &__cols23 {
+        flex: 1 1 30%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__col2 {
+        padding: 30px 35px 25px;
+        flex: 1 1 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .gray-btn {
+            width: 100%;
+            margin-top: 30px;
+        }
+        .user-avatar-wrapper {
+            min-width: 100px;
+            max-width: 100px;
+            min-height: 100px;
+            max-height: 100px;
+        }
+    }
+
+    &__col3 {
+        padding: 25px 35px;
+        flex: 1 1 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .line-separator {
+        margin-bottom: 35px;
+    }
+}
+
+.row2 {
+    display: flex;
+    margin: 30px -10px -10px;
+    flex-wrap: wrap;
+    .row__col {
+        margin: 10px;
+    }
+
+    &__col1 {
+        flex: 1 1 65%;
+        margin: 10px;
+        padding: 35px 45px 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__col2 {
+        flex: 1 1 30%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .line-separator {
+        margin-bottom: 35px;
+    }
+}
+
+.row3 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px -10px;
+
+    &__col {
+        position: relative;
+        flex: 1 1 30%;
+        margin: 10px;
+        padding: 25px 25px 15px;
+
+        &__block1 {
+            display: flex;
+            align-items: center;
+        }
+        &__block2 {
+            margin-top: 20px;
+        }
+        .line-separator {
+            margin-bottom: 20px;
+        }
+        .gray-btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__img {
+            padding: 12px;
+            margin-right: 15px;
+            width: 48px;
+            height: 48px;
+            background: rgba(47, 83, 255, 0.2);
+            border-radius: 12px;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: 0.3s ease;
+                &:hover {
+                    filter: drop-shadow(0 4px 5px #2f52ff);
+                }
+            }
+        }
+        .status-label {
+            margin-left: auto;
+            align-self: start;
+        }
+        &__text {
+            margin-right: 25px;
+        }
+        &__key {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        &__value {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .user-country-select {
+            margin-left: auto;
+        }
+    }
+}
+
+.settings {
+    &-heading {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    &-userdata {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+        &-item {
+            flex: 1 1 45%;
+            input#settings-userdata--instagram {
+                position: relative;
+                padding: 12px 20px;
+                &::placeholder {
+                    background: url("../img/icons/instagram_placeholder.svg") left top / contain no-repeat;
+                }
+            }
+        }
+    }
+    &-useradress {
+        margin: -15px;
+        display: flex;
+        flex-wrap: wrap;
+        &-item {
+            flex: 1 0 24%;
+            input {
+                width: 100%
+            }
+            &:last-child {
+                flex: 0 1 10%;
+            }
+        }
+    }
+    &-usernotifications {
+        margin: auto -15px;
+        &-item {
+            flex-direction: row;
+            align-items: center;
+            input {
+                position: relative;
+                appearance: none;
+                background: rgba(255, 255, 255, 0.07);
+                border-radius: 12px;
+                height: 24px;
+                width: 40px;
+                max-width: 40px;
+                min-width: 40px;
+                cursor: pointer;
+                transition: 0.2s ease;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 2px;
+                    top: 2px;
+                    background: #FFF;
+                    width: 20px;
+                    height: 20px;  
+                    border-radius: 50%;
+                    transition: 0.2s ease;
+                }
+                &:checked {
+                    background: #2F53FF;
+                    &:before {
+                        left: 18px;
+                    }
+                }
+            }
+            label {
+                margin: 0 0 0 12px;
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+}
+
+.status-label {
+    padding: 5px 15px;
+}
+.system-msg {
+    margin-top: 10px;
+}
+
+
+@media (max-width: 1279px) {
+    .settings {
+        &-useradress {
+            &-item {
+                flex: 1 0 40%;
+            }
+        }
+    }
+}
