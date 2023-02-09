@@ -29,8 +29,10 @@
 }
 .faq-item-spoiler {
     margin-left: auto;
-    width: 28px;
-    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    max-width: 28px;
+    max-height: 28px;
     border-radius: 50%;
     background: #2f53ff;
     position: relative;
