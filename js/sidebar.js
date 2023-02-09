@@ -35,6 +35,7 @@ document.write(`<aside class="sidebar">
                         <div class="counter">20</div>
                     </a>
                 </li>
+                <br><br>
                 <li>
                     <a href="auctions.html" class="sidebar__menu-item" id="sidebar__menu-link--auctions">
                         <div class="sidebar__menu-item-icon">
@@ -55,13 +56,14 @@ document.write(`<aside class="sidebar">
                     </a>
                 </li>
                 <li>
-                    <a href="winers.html" class="sidebar__menu-item" id="sidebar__menu-link--winers">
+                    <a href="winners.html" class="sidebar__menu-item" id="sidebar__menu-link--winners">
                         <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/nav/winers.svg" alt="">
+                            <img src="./img/icons/nav/winners.svg" alt="">
                         </div>
                         Лента победителей
                     </a>
                 </li>
+                <br><br>
                 <li>
                     <a href="referal.html" class="sidebar__menu-item" id="sidebar__menu-link--referal">
                         <div class="sidebar__menu-item-icon">
@@ -92,6 +94,7 @@ document.write(`<aside class="sidebar">
                         <div class="counter">20</div>
                     </a>
                 </li>
+                <br><br>
                 <li>
                     <a href="faq.html" class="sidebar__menu-item" id="sidebar__menu-link--faq">
                         <div class="sidebar__menu-item-icon">

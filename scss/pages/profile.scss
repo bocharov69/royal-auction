@@ -56,11 +56,11 @@
 .row2 {
     display: flex;
     margin-top: 25px;
-    background: #171A1E;
+    background: #171a1e;
     border-radius: 17px;
     padding: 25px;
 
-    max-width: calc(100vw - 385px);
+    max-width: 100%;
     overflow: auto;
     scrollbar-width: none;
     &::-webkit-scrollbar {
@@ -311,7 +311,8 @@
     display: flex;
     flex-wrap: wrap;
 
-    &__col1, &__col2 {
+    &__col1,
+    &__col2 {
         flex: 1 1 40%;
         margin: 20px 15px;
     }
@@ -320,7 +321,6 @@
         position: relative;
         height: 400px;
     }
-    
 }
 
 @media (max-width: 1279px) {
@@ -338,10 +338,8 @@
             padding: 17px 20px;
         }
     }
-    .row2 {
-        max-width: calc(100vw - 41px);
-    }
 }
+
 @media (max-width: 1023px) {
     .row3 {
         &__col1 {
@@ -362,6 +360,16 @@
         &__col4 {
             grid-column-start: 3;
             grid-column-end: 4;
+        }
+    }
+
+    .row4 {
+        .donutchart-container {
+            margin-left: 30px;
+        }
+        .donutchart svg {
+            max-width: 120px;
+            max-height: 120px;
         }
     }
 }

@@ -51,10 +51,10 @@
 .row2 {
   display: flex;
   margin-top: 25px;
-  background: #171A1E;
+  background: #171a1e;
   border-radius: 17px;
   padding: 25px;
-  max-width: calc(100vw - 385px);
+  max-width: 100%;
   overflow: auto;
   scrollbar-width: none;
 }
@@ -308,9 +308,6 @@
   .row1__col2 {
     padding: 17px 20px;
   }
-  .row2 {
-    max-width: calc(100vw - 41px);
-  }
 }
 @media (max-width: 1023px) {
   .row3__col1 {
@@ -330,6 +327,13 @@
   .row3__col3, .row3__col4 {
     grid-column-start: 3;
     grid-column-end: 4;
+  }
+  .row4 .donutchart-container {
+    margin-left: 30px;
+  }
+  .row4 .donutchart svg {
+    max-width: 120px;
+    max-height: 120px;
   }
 }
 @media (max-width: 540px) {

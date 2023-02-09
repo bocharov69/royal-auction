@@ -60,7 +60,7 @@ h6 {
     overflow: auto;
     display: none;
     &.is-active {
-        display: block;
+        display: flex;
     }
 }
 .modal {
@@ -494,23 +494,17 @@ h6 {
 
 @media (max-width: 1279px) {
     .main {
-        margin: 0 15px 0 93px;
+        margin: 0 0 0 73px;
+    }
+    .page {
+        width: 100vw;
+        padding: 0 15px 0 30px;
     }
     .page__heading {
         position: relative;
         top: 0;
         left: 0;
         margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 1023px) {
-    .circle-graph-progress {
-        margin-left: 30px;
-        &-bar {
-            max-width: 120px;
-            max-height: 120px;
-        }
     }
 }
 
@@ -534,5 +528,9 @@ h6 {
         &-heading {
             padding-left: 25px;
         }
+    }
+    .page__tab-btn {
+        padding: 12px;
+        margin: 10px 5px;
     }
 }

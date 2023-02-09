@@ -34,6 +34,7 @@
     }
 
     &__col2 {
+        position: relative;
         flex: 1 1 35%;
         margin: 10px;
         padding: 27px 34px;
@@ -42,8 +43,8 @@
         align-items: center;
 
         &__img {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             img {
                 width: 100%;
                 height: 100%;
@@ -52,18 +53,20 @@
         }
 
         &__text {
-            margin: 20px 0 0 20px;
+            margin: 35px 0 0 10px;
             flex: 1 1 auto;
         }
 
         
 
         &__status {
+            position: absolute;
+            right: 34px;
+            top: 27px;
             background: #2453f9;
             color: #fff;
             border-radius: 5px;
             padding: 5px 20px;
-            align-self: start;
         }
     }
 }
@@ -117,7 +120,7 @@
             align-self: start;
         }
         &__text {
-            margin-right: 25px;
+            margin-right: 15px;
         }
         &__key {
             font-size: 16px;
@@ -125,6 +128,7 @@
         }
         &__value {
             color: rgba(255, 255, 255, 0.4);
+            word-break: break-all;
         }
     }
 }
@@ -192,7 +196,7 @@
     &__col2 {
         flex: 1 1 45%;
         margin: 10px;
-        padding: 35px 35px 25px;
+        padding: 35px 30px 25px;
         display: flex;
         flex-direction: column;
         &__list {
@@ -202,7 +206,7 @@
                 align-items: center;
                 margin-top: 10px;
                 .list-p {
-                    margin: 0 35px 0 20px;
+                    margin: 0 20px 0 15px;
                     &:last-child {
                         margin: 0 0 0 auto;
                     }
@@ -229,7 +233,7 @@
     &__cols12 {
         display: flex;
         flex-direction: column;
-        flex: 1 1 47%;
+        flex: 1 1 45%;
     }
 
     &__col3 {
@@ -238,8 +242,11 @@
         padding: 35px 35px 25px;
         display: flex;
         flex-direction: column;
+        
         &__list {
             margin: auto 0;
+            overflow: auto;
+
             &-item {
                 display: flex;
                 align-items: center;
@@ -273,21 +280,6 @@
             max-width: calc(100vw + 150px);
             max-height: 320px;
             overflow: auto;
-
-            scrollbar-width: thin;
-            scrollbar-color: #7d7f82 #272a2e;
-
-            &::-webkit-scrollbar {
-                width: 6px;
-                height: 6px;
-            }
-            &::-webkit-scrollbar-track {
-                background: #272a2e;
-            }
-            &::-webkit-scrollbar-thumb {
-                background-color: #7d7f82;
-                border-radius: 10px;
-            }
         }
 
         .tg td {
@@ -409,6 +401,10 @@
         }
         &__col2 {
             padding: 17px 20px;
+            &__status {
+                top: 17px;
+                right: 20px
+            }
         }
     }
 }
@@ -418,6 +414,18 @@
         &__col {
             flex: 1 1 100%;
             max-height: 200px;
+        }
+    }
+    .row4 {
+        .donutchart-container {
+            margin-left: 30px;
+        }
+        .donutchart svg {
+            max-width: 80px;
+            max-height: 80px;
+        }
+        .donutchart-text {
+            font-size: 19px;
         }
     }
     .row5 {
