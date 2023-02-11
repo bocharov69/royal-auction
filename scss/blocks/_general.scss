@@ -53,9 +53,9 @@ h6 {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100vw ;
-    height: 100% ;
-    background: rgba(0,0,0,0.6);
+    width: 100vw;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1000;
     overflow: auto;
     display: none;
@@ -64,7 +64,7 @@ h6 {
     }
 }
 .modal {
-    background: #121416 radial-gradient(circle, rgba(75,115,255,0.2) 0%, rgba(0,0,0,0) 100%);
+    background: #121416 radial-gradient(circle, rgba(75, 115, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
     box-shadow: 0px 4px 20px #000000;
     border-radius: 15px;
     padding: 45px 45px 35px;
@@ -110,13 +110,30 @@ h6 {
     font-weight: 300;
     padding: 15px 10%;
     color: #fff;
-    background: #2F53FF;
+    background: #2f53ff;
     display: inline-block;
     border-radius: 8px;
     transition: 0.3s ease;
     cursor: pointer;
     &:hover {
         box-shadow: 0px 4px 15px -2px #2f52ffbd;
+    }
+    &.is-disabled {
+        color: rgba(255, 255, 255, 0.4);
+        background: rgba(47, 83, 255, 0.2);
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}
+.swiper-pagination-bullet {
+    background: #BBBBBB !important;
+    opacity: 1 !important;
+    border-radius: 4px !important;
+    transition: width 0.3s ease;
+    &-active {
+        background: #FAFAFA !important;
+        width: 32px !important;
     }
 }
 .unread {
@@ -176,8 +193,9 @@ h6 {
 .form-item {
     display: flex;
     flex-direction: column;
+    position: relative;
     margin: 15px;
-    
+
     label {
         font-weight: 300;
         font-size: 12px;
@@ -192,9 +210,24 @@ h6 {
         color: #fff;
         padding: 12px 17px;
         transition: 0.3s ease;
+        border: 1px solid transparent;
         &:hover {
             box-shadow: 0px 2px 15px -2px rgba(0, 0, 0, 0.7);
         }
+        &:focus {
+            background: rgba(47, 83, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        &.is-haserror {
+            color: #EB001B;
+            border: 1px solid #EB001B;
+            & ~ .system-msg {
+                color: #EB001B;
+            }
+        }
+    }
+    .system-msg {
+        margin-top: 10px;
     }
 }
 
@@ -391,10 +424,10 @@ h6 {
     padding: 10px 45px 10px 0px !important;
     color: rgba(255, 255, 255, 0.4) !important;
     overflow: hidden;
-    
+
     option {
         font-size: 12px !important;
-        color:#000 !important;
+        color: #000 !important;
     }
 }
 .barchart {

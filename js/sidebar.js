@@ -10,19 +10,19 @@ document.write(`<aside class="sidebar">
         <nav>
             <ul class="sidebar__menu">
                 <li>
-                    <a href="index.html" class="sidebar__menu-item" id="sidebar__menu-link--main">
-                        <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/nav/main.svg" alt="">
-                        </div>
-                        Главная
-                    </a>
-                </li>
-                <li>
                     <a href="profile.html" class="sidebar__menu-item" id="sidebar__menu-link--profile">
                         <div class="sidebar__menu-item-icon">
                             <img src="./img/icons/nav/profile.svg" alt="">
                         </div>
                         Профиль
+                    </a>
+                </li>
+                <li>
+                    <a href="auctions.html" class="sidebar__menu-item" id="sidebar__menu-link--auctions">
+                        <div class="sidebar__menu-item-icon">
+                            <img src="./img/icons/nav/auctions.svg" alt="">
+                        </div>
+                        Аукционы
                     </a>
                 </li>
                 <li>
@@ -36,14 +36,6 @@ document.write(`<aside class="sidebar">
                     </a>
                 </li>
                 <br><br>
-                <li>
-                    <a href="auctions.html" class="sidebar__menu-item" id="sidebar__menu-link--auctions">
-                        <div class="sidebar__menu-item-icon">
-                            <img src="./img/icons/nav/auctions.svg" alt="">
-                        </div>
-                        Аукционы
-                    </a>
-                </li>
                 <li>
                     <a href="myauctions.html" class="sidebar__menu-item is-unread is-hascounter"
                         id="sidebar__menu-link--myauctions">
@@ -63,7 +55,6 @@ document.write(`<aside class="sidebar">
                         Лента победителей
                     </a>
                 </li>
-                <br><br>
                 <li>
                     <a href="referal.html" class="sidebar__menu-item" id="sidebar__menu-link--referal">
                         <div class="sidebar__menu-item-icon">
@@ -72,6 +63,7 @@ document.write(`<aside class="sidebar">
                         Партнерская программа
                     </a>
                 </li>
+                <br><br>
                 <li>
                     <a href="news.html" class="sidebar__menu-item is-unread is-hascounter"
                         id="sidebar__menu-link--news">
@@ -92,6 +84,15 @@ document.write(`<aside class="sidebar">
                         Уведомления
                         <div class="unread"></div>
                         <div class="counter">20</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="##" class="sidebar__menu-item"
+                        id="sidebar__menu-link--aboutus">
+                        <div class="sidebar__menu-item-icon">
+                            <img src="./img/icons/nav/aboutus.svg" alt="">
+                        </div>
+                        О нас
                     </a>
                 </li>
                 <br><br>
