@@ -18,20 +18,9 @@
   display: flex;
 }
 .row1__col2 .progress-step {
-  position: relative;
   padding-bottom: 50px;
-  margin-left: 30px;
-}
-.row1__col2 .progress-step:first-child {
-  padding-top: 30px;
 }
 .row1__col2 .progress-step:not(.row1__col2 .progress-step:first-child) .progress-step-heading:after {
-  content: "";
-  position: absolute;
-  left: -27px;
-  top: -100%;
-  width: 2px;
-  height: 100%;
   border: 1px solid #2F53FF;
 }
 .row1__col2 .progress-step:last-child .progress-step-heading:before {
@@ -48,9 +37,6 @@
   margin-bottom: 10px;
 }
 .row1__col2 .progress-step-heading:before {
-  content: "";
-  position: absolute;
-  left: -30px;
   border-radius: 50%;
   border: 4px solid #2F53FF;
 }
