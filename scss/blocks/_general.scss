@@ -32,6 +32,9 @@ html {
     position: relative;
     flex: 1 1 100%;
     margin: 0 40px 0 345px;
+
+    //////
+    overflow-x: hidden;
 }
 .page {
     flex: 1 0 100%;
@@ -127,12 +130,12 @@ h6 {
     }
 }
 .swiper-pagination-bullet {
-    background: #BBBBBB !important;
+    background: #bbbbbb !important;
     opacity: 1 !important;
     border-radius: 4px !important;
     transition: width 0.3s ease;
     &-active {
-        background: #FAFAFA !important;
+        background: #fafafa !important;
         width: 32px !important;
     }
 }
@@ -219,10 +222,10 @@ h6 {
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         &.is-haserror {
-            color: #EB001B;
-            border: 1px solid #EB001B;
+            color: #eb001b;
+            border: 1px solid #eb001b;
             & ~ .system-msg {
-                color: #EB001B;
+                color: #eb001b;
             }
         }
     }
@@ -352,7 +355,7 @@ h6 {
     }
     &-heading {
         &:before {
-            content: '';
+            content: "";
             position: absolute;
             left: -30px;
         }
@@ -382,6 +385,21 @@ h6 {
         max-width: calc(100vw + 150px);
         max-height: 320px;
         overflow: auto;
+
+        scrollbar-width: thin;
+        scrollbar-color: #a9a9a9 #2f3032;
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #2f3032;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #bbbbbb;
+            border-radius: 10px;
+            border: 0px none #000000;
+        }
     }
 
     .tg td {
@@ -623,6 +641,9 @@ h6 {
 }
 
 @media (max-width: 1279px) {
+    .main {
+        overflow-x: auto;
+    }
     .main {
         margin: 0 0 0 73px;
     }

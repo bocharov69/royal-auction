@@ -39,26 +39,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (page_tab_btns.length > 0) {
         for (let i = 0; i < page_tab_btns.length; i++) {
-            let id = page_tab_btns[i].getAttribute("for");
 
             if (page_tab_btns[i].classList.contains('is-active')) {
-                document.getElementById(id).classList.add('is-active');
+                document.getElementById(page_tab_btns[i].getAttribute("for")).classList.add('is-active');
             } else
-                document.getElementById(id).classList.remove('is-active');
+                document.getElementById(page_tab_btns[i].getAttribute("for")).classList.remove('is-active');
 
             page_tab_btns[i].addEventListener("click", function (e) {
-                let other_tab;
-                id = e.target.getAttribute("for");
-                if (page_tab_btns[i - 1])
-                    other_tab = page_tab_btns[i - 1];
-                else if (page_tab_btns[i + 1])
-                    other_tab = page_tab_btns[i + 1];
-                console.log(other_tab);
-                if (other_tab.classList.contains('is-active')) {
-                    document.getElementById(other_tab.getAttribute("for")).classList.remove('is-active');
-                    other_tab.classList.remove('is-active');
-                }
-                document.getElementById(id).classList.add('is-active');
+                page_tab_btns.forEach(element => {
+                    element.classList.remove('is-active');
+                    document.getElementById(element.getAttribute("for")).classList.remove('is-active');
+                });
+                
+                document.getElementById(e.target.getAttribute("for")).classList.add('is-active');
                 e.target.classList.add('is-active');
             });
         }
