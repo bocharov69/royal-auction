@@ -35,6 +35,11 @@ html {
 
     //////
     overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 .page {
     flex: 1 0 100%;

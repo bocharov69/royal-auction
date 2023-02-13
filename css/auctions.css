@@ -458,7 +458,7 @@
   background: #1b264b;
 }
 
-.auction__category:nth-child(odd) .auction__category-top-item:nth-child(2) {
+.auction__category:nth-child(odd) .auction__category-top-item:nth-child(1) {
   background: #1b264b;
 }
 
@@ -466,11 +466,11 @@
   background: #1b264b;
 }
 
-.auction__category:nth-child(even) .auction__category-top-item:nth-child(3) {
+.auction__category:nth-child(even) .auction__category-top-item:nth-child(1) {
   background: #163d4b;
 }
 
-.auction__category:nth-child(odd) .auction__category-top-item:nth-child(1) {
+.auction__category:nth-child(odd) .auction__category-top-item:nth-child(3) {
   background: #163d4b;
 }
 
@@ -502,7 +502,7 @@
   background: #272a2e;
 }
 
-.auction__category:nth-child(even) .auction__category-top-item:nth-child(3) {
+.auction__category:nth-child(even) .auction__category-top-item:nth-child(2) {
   background: #3c2834;
 }
 
