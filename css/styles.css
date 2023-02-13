@@ -714,7 +714,7 @@ h6 {
 
 @media (max-width: 1279px) {
   .main {
-    overflow-x: auto;
+    overflow-x: visible;
   }
   .main {
     margin: 0 0 0 73px;
