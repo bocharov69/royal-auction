@@ -108,7 +108,7 @@
         }
         &-input {
             visibility: hidden;
-                width: 0px;
+            width: 0px;
             &:checked + label:before {
                 background: url(../img/icons/checkboxes/checkmark.svg) center / contain no-repeat;
                 border: 2px solid #000;
@@ -307,169 +307,166 @@
         border-radius: 17px;
         display: flex;
         flex-direction: column;
-    }
+        &-visual {
+            padding: 15px;
+            position: relative;
+            border-radius: 17px;
+            flex: 1 1 100%;
+            max-height: 270px;
+        }
 
-    &__card-visual {
-        padding: 15px;
-        position: relative;
-        border-radius: 17px;
-        flex: 1 1 100%;
-        max-height: 270px;
-    }
-
-    &__card-img {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        img {
+        &-img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            text-align: center;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
         }
-    }
 
-    &__card-sticker {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        font-weight: 400;
-        font-size: 10px;
-        background: rgba(0, 0, 0, 0.74);
-        color: #fff;
-        border-radius: 20px;
-        padding: 5px 10px 5px 35px;
-        line-height: 1.2;
-        z-index: 2;
-        &:before {
-            content: "";
-            display: inline-block;
+        &-sticker {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             position: absolute;
-            border-radius: 50%;
-            border: 13px solid;
-            left: 5px;
-            top: 5px;
-        }
-
-        &.sticker-deposit {
-            bottom: 10px;
-            left: 10px;
-            height: 36px;
+            font-weight: 400;
+            font-size: 10px;
+            background: rgba(0, 0, 0, 0.74);
+            color: #fff;
+            border-radius: 20px;
+            padding: 5px 10px 5px 35px;
+            line-height: 1.2;
+            z-index: 2;
             &:before {
-                border-color: #2f53ff;
-            }
-        }
-        &.sticker-email {
-            top: 10px;
-            left: 10px;
-            height: 28px;
-            padding: 5px 15px 5px 28px;
-            &:before {
-                border: 9px solid #f79e1b;
-            }
-        }
-        &.sticker-payment {
-            top: 10px;
-            right: 10px;
-            padding: 10px 20px;
-            &:before {
-                display: none;
+                content: "";
+                display: inline-block;
+                position: absolute;
+                border-radius: 50%;
+                border: 13px solid;
+                left: 5px;
+                top: 5px;
             }
 
-            &.is-active {
-                font-weight: 600;
-                color: rgba(0, 0, 0, 0.7);
-                background: #fff;
+            &.sticker-deposit {
+                bottom: 10px;
+                left: 10px;
+                height: 36px;
+                &:before {
+                    border-color: #2f53ff;
+                }
             }
-            &.is-enabled {
-                border: 1px solid #f79e1b;
+            &.sticker-email {
+                top: 10px;
+                left: 10px;
+                height: 28px;
+                padding: 5px 15px 5px 28px;
+                &:before {
+                    border: 9px solid #f79e1b;
+                }
+            }
+            &.sticker-payment {
+                top: 10px;
+                right: 10px;
+                padding: 10px 20px;
+                &:before {
+                    display: none;
+                }
+
+                &.is-active {
+                    font-weight: 600;
+                    color: rgba(0, 0, 0, 0.7);
+                    background: #fff;
+                }
+                &.is-enabled {
+                    border: 1px solid #f79e1b;
+                }
+                &.is-disabled {
+                    font-weight: 600;
+                    color: rgba(0, 0, 0, 0.7);
+                    background: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+
+        &-sticker-bigp {
+            font-size: 14px;
+            color: inherit;
+        }
+        &-sticker-p {
+            font-size: 12px;
+            color: inherit;
+        }
+        &-sticker-smp {
+            font-weight: 300;
+            color: inherit;
+        }
+
+        &-text {
+            padding: 15px;
+        }
+
+        &-heading {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        &-cost {
+            margin-left: 15px;
+        }
+
+        &-smp {
+            font-weight: 300;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        &-placesleft {
+            color: inherit;
+        }
+
+        &-date {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 300;
+
+            &.is-timer {
+                background: #13161a;
+                border-radius: 8px;
+                padding: 10px;
             }
             &.is-disabled {
-                font-weight: 600;
-                color: rgba(0, 0, 0, 0.7);
-                background: rgba(255, 255, 255, 0.5);
+                color: rgba(255, 255, 255, 0.4);
             }
         }
-    }
 
-    &__card-sticker-bigp {
-        font-size: 14px;
-        color: inherit;
-    }
-    &__card-sticker-p {
-        font-size: 12px;
-        color: inherit;
-    }
-    &__card-sticker-smp {
-        font-weight: 300;
-        color: inherit;
-    }
-
-    &__card-text {
-        padding: 15px;
-    }
-
-    &__card-heading {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-    }
-    &__card-cost {
-        margin-left: 15px;
-    }
-
-    &__card-smp {
-        font-weight: 300;
-        font-size: 12px;
-        color: rgba(255, 255, 255, 0.4);
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-    }
-    &__card-placesleft {
-        color: inherit;
-    }
-
-    &__card-date {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-        font-weight: 300;
-
-        &.is-timer {
-            background: #13161a;
-            border-radius: 8px;
-            padding: 10px;
-        }
-        &.is-disabled {
-            color: rgba(255, 255, 255, 0.4);
-        }
-    }
-
-    /*&__card-date-value {
-    } */
-
-    &__card-btn {
-        width: calc(100% - 30px);
-        margin: auto 15px 15px;
-        padding: 10px 15px;
-        border-radius: 10px;
-        transition: 0.3s ease;
-        background: none;
-        &.is-active {
-            background: #00a76b;
-            color: #fff;
-        }
-        &.is-disabled {
-            color: rgba(255, 255, 255, 0.4);
-            background: rgba(255, 255, 255, 0.07);
-        }
-        &.is-enabled {
-            border: 1px solid #2f53ff;
-            color: #2f53ff;
-            &:hover {
+        &-btn {
+            width: calc(100% - 30px);
+            margin: auto 15px 15px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: 0.3s ease;
+            background: none;
+            text-align: center;
+            &.is-active {
+                background: #00a76b;
                 color: #fff;
-                background: #2f53ff;
+            }
+            &.is-disabled {
+                color: rgba(255, 255, 255, 0.4);
+                background: rgba(255, 255, 255, 0.07);
+            }
+            &.is-enabled {
+                border: 1px solid #2f53ff;
+                color: #2f53ff;
+                &:hover {
+                    color: #fff;
+                    background: #2f53ff;
+                }
             }
         }
     }
@@ -510,6 +507,9 @@ $bg_colors: (1 "#1b264b") (2 "#163d4b") (3 "#414758") (4 "#272a2e") (5 "#3c2834"
     .auction {
         margin-left: 0;
         flex-wrap: wrap;
+        &__main {
+            margin-right: 0;
+        }
         &__filterbar {
             flex: 1 1 100%;
             order: -1;

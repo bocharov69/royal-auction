@@ -1,4 +1,4 @@
-//slider
+//sliders
 const auc_category_slider = new Swiper('.auction__categories-wrapper', {
     direction: 'horizontal',
     slidesPerView: '1',
@@ -21,6 +21,8 @@ const auc_category_slider = new Swiper('.auction__categories-wrapper', {
         }
     }
 });
+
+
 
 //filterbar
 const showbtn = document.querySelector('.auction__filterbar-heading-showbtn');

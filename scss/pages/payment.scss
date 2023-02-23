@@ -18,7 +18,7 @@
         }
         .progress-step {
             padding-bottom: 50px;
-            &:not(&:first-child) .progress-step-heading:after {
+            &:not(&:last-child) .progress-step-heading:after {
                 border: 1px solid #2F53FF;
             }
             &:last-child .progress-step-heading:before {

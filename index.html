@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script src="./js/swiper-bundle.min.js"></script>
     <title>Главная</title>
 </head>
 
@@ -298,6 +300,29 @@
 
                 <script src="./js/footer.js"></script>
             </main>
+
+            <div class="main__modal-wrapper modal-wrapper is-active">
+                <div class="main__modal modal swiper">
+                    <div class="modal-pagination swiper-pagination"></div>
+                    <div class="swiper-wrapper">
+                        <div class="main__modal-slide modal-slide swiper-slide">
+                            <h3 class="modal-title">Добро пожаловать!</h3>
+                            <div class="modal-img">
+                                <img src="./img/modal/main_wlc.png" alt="">
+                            </div>
+                            <p class="modal-paragraph">ROYAL AUCTION - это международная it-платформа для организации онлайн аукционов</p>
+                        </div>
+                        <div class="main__modal-slide modal-slide swiper-slide">
+                            <h3 class="modal-title">Прежде чем Вы начнете</h3>
+                            <div class="modal-img">
+                                <img src="./img/modal/main_wlc2.png" alt="">
+                            </div>
+                            <p class="modal-paragraph">Загляните на страницу профиля, там вы найдете задания, за выполнения которых вам будут начисляться токены ROTO</p>
+                        </div>
+                    </div>
+                    <button class="modal-nextel submit-btn swiper-slide-next"></button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="./js/script.js"></script>

@@ -186,7 +186,7 @@
   font-weight: 300;
   line-height: 1.5;
 }
-.row1__col4 .progress-step:not(.row1__col4 .progress-step:first-child) .progress-step-heading:after {
+.row1__col4 .progress-step:not(.row1__col4 .progress-step:last-child) .progress-step-heading:after {
   border-left: 2px solid #637592;
 }
 .row1__col4 .progress-step.is-active .progress-step-heading:before {

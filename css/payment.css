@@ -20,7 +20,7 @@
 .row1__col2 .progress-step {
   padding-bottom: 50px;
 }
-.row1__col2 .progress-step:not(.row1__col2 .progress-step:first-child) .progress-step-heading:after {
+.row1__col2 .progress-step:not(.row1__col2 .progress-step:last-child) .progress-step-heading:after {
   border: 1px solid #2F53FF;
 }
 .row1__col2 .progress-step:last-child .progress-step-heading:before {

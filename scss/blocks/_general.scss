@@ -66,20 +66,42 @@ h6 {
     background: rgba(0, 0, 0, 0.6);
     z-index: 1000;
     overflow: auto;
-    display: none;
+    display: none !important;
     &.is-active {
-        display: flex;
+        display: flex !important;
     }
 }
 .modal {
     background: #121416 radial-gradient(circle, rgba(75, 115, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
     box-shadow: 0px 4px 20px #000000;
     border-radius: 15px;
-    padding: 45px 45px 35px;
-    width: 430px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 700px !important;
+    padding: 0;
     max-width: 90vw;
     margin: auto;
-    z-index: 1001;
+    z-index: 1001 !important;
+    &-img {
+        position: relative;
+        margin-bottom: 40px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    &-paragraph {
+        font-weight: 300;
+        line-height: 1.5;
+    }
     .line-separator {
         margin-bottom: 40px;
     }
@@ -91,6 +113,31 @@ h6 {
         margin-top: 45px;
     }
 }
+.modal-slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 45px 80px;
+    align-self: center;
+}
+.modal-nextel {
+    width: 50% !important;
+    margin: 0 auto 80px !important;
+    &:before {
+        content: 'Далее >';
+        display: block;
+    }
+    &[aria-disabled="true"]:before {
+        content: "Прекрасно!";
+        display: block;
+    }
+}
+.modal-pagination {
+    bottom: 30px !important;
+}
+
+
 .logo {
     display: flex;
     align-items: center;
@@ -119,12 +166,21 @@ h6 {
     padding: 15px 10%;
     color: #fff;
     background: #2f53ff;
+    border: 1px solid #2f53ff;
     display: inline-block;
     border-radius: 8px;
     transition: 0.3s ease;
     cursor: pointer;
     &:hover {
-        box-shadow: 0px 4px 15px -2px #2f52ffbd;
+        background: #2f53ff !important;
+        border: 1px solid #2f53ff !important;
+        box-shadow: 0px 4px 15px -2px #2f52ffbd !important;
+        color: #fff;
+    }
+    &.is-active,
+    &[aria-disabled="false"] {
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background: none;
     }
     &.is-disabled {
         color: rgba(255, 255, 255, 0.4);
@@ -321,7 +377,7 @@ h6 {
         left: 50%;
         transform: translateX(-50%);
         display: inline-block;
-        background: rgba(50, 53, 61, 0.85);
+        background: rgba(50, 53, 61, 1);
         padding: 11px;
         border-radius: 8px;
         font-weight: 300;
@@ -348,13 +404,13 @@ h6 {
     padding-bottom: 30px;
     margin-left: 30px;
     &:first-child {
-        padding-top: 30px;
+        margin-top: 30px;
     }
-    &:not(&:first-child) .progress-step-heading:after {
+    &:not(&:last-child) .progress-step-heading:after {
         content: "";
         position: absolute;
         left: -27px;
-        top: -100%;
+        top: 0;
         width: 2px;
         height: 100%;
     }

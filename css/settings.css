@@ -1,3 +1,10 @@
+.modal {
+  display: block !important;
+  text-align: left !important;
+  padding: 45px 45px 35px;
+  width: 430px !important;
+}
+
 .row1 {
   display: flex;
   flex-wrap: wrap;
@@ -144,16 +151,12 @@
 }
 .settings-userdata-item input#settings-userdata--instagram {
   position: relative;
-  padding: 12px 20px;
 }
 .settings-userdata-item input#settings-userdata--instagram::-webkit-input-placeholder {
   background: url("../img/icons/instagram_placeholder.svg") left top/contain no-repeat;
 }
-.settings-userdata-item input#settings-userdata--instagram:-ms-input-placeholder {
-  background: url("../img/icons/instagram_placeholder.svg") left top/contain no-repeat;
-}
-.settings-userdata-item input#settings-userdata--instagram::placeholder {
-  background: url("../img/icons/instagram_placeholder.svg") left top/contain no-repeat;
+.settings-userdata-item input#settings-userdata--instagram::-moz-placeholder {
+  background: url("../img/icons/instagram_placeholder.svg") 17px 12px/18px no-repeat;
 }
 .settings-useradress {
   margin: -15px;

@@ -30,10 +30,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    //header notification tooltip
+    if (window.matchMedia("(pointer: coarse)").matches) {
+        document.getElementById('header__menu-link--notifications').addEventListener('click', function (e) {
+            if (e.target === this || e.target === this.querySelector('.header-notification-unread') || e.target === this.querySelector('.header__menu-item-img') || e.target === this.querySelector('.header__menu-item-img img'))
+                e.preventDefault();
+        })
+    }
+    window.addEventListener("resize", function () {
+        if (window.matchMedia("(pointer: coarse)").matches) {
+            document.querySelector('#header__menu-link--notifications').addEventListener('click', function (e) {
+                if (e.target === this || e.target === this.querySelector('.header-notification-unread') || e.target === this.querySelector('.header__menu-item-img') || e.target === this.querySelector('.header__menu-item-img img'))
+                    e.preventDefault();
+            })
+        }
+    });
+
     //header menu language icon change
     let user_lang = navigator.language || navigator.userLanguage;
     document.getElementById('header__menu-link--language').style = `background: url('./img/icons/languages/${user_lang}.svg') center / contain no-repeat;`
-    
+
     //page tab change
     const page_tab_btns = document.querySelectorAll('.page__tab-btn');
 
@@ -50,11 +66,69 @@ document.addEventListener('DOMContentLoaded', function () {
                     element.classList.remove('is-active');
                     document.getElementById(element.getAttribute("for")).classList.remove('is-active');
                 });
-                
+
                 document.getElementById(e.target.getAttribute("for")).classList.add('is-active');
                 e.target.classList.add('is-active');
             });
         }
+    }
+
+    //modal windows
+    const modal_wrapper = document.querySelector('.modal-wrapper');
+    if (modal_wrapper) {
+        function closemodal() {
+            modal_wrapper.classList.remove("is-active");
+            document.querySelector('.body').style.overflow = 'visible';
+        }
+
+        if (modal_wrapper.classList.contains('is-active')) {
+            document.querySelector('.body').style.overflow = 'hidden';
+            modal_wrapper.addEventListener("click", function (e) {
+                if (e.target === this) {
+                    e.preventDefault();
+                    closemodal();
+                }
+            });
+        }
+
+        const modal_slider = new Swiper('.modal.swiper', {
+            direction: 'horizontal',
+            slidesPerView: '1',
+            speed: 500,
+            watchOverflow: false,
+            loop: false,
+            autoHeight: false,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            allowTouchMove: false,
+            pagination: {
+                el: '.modal-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.modal-nextel',
+            }
+        });
+
+
+        const modal_nextbtn = document.querySelector('.modal-nextel');
+        const modal_slides = document.querySelectorAll('.modal-slide');
+        const modal_last_slide_index = modal_slides.length - 1;
+        let real_index = 0;
+
+        modal_nextbtn.removeAttribute('disabled');
+        modal_slider.on('slideChange', function () {
+            real_index = modal_slider.realIndex;
+            modal_nextbtn.removeAttribute('disabled');
+        });
+
+        modal_nextbtn.addEventListener('click', function (e) {
+            if (!modal_slider.animating)
+                if (e.target.matches('[aria-disabled="true"]') && real_index === modal_last_slide_index)
+                    closemodal();
+        });
     }
 
     //barchart !!(required defined width and height on main parent (parent of barchart-wrapper))
