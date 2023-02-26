@@ -68,6 +68,9 @@
   flex: 1 1 20%;
   margin-left: 20px;
 }
+.lot__col2-heading {
+  font-size: 16px;
+}
 .lot__col2 .line-separator {
   margin: 20px 0 10px;
 }
@@ -81,6 +84,7 @@
 }
 .lot__col2 .user-email {
   margin: 0 15px;
+  word-break: break-word;
 }
 .lot__col2 .user-date {
   margin-left: auto;
@@ -114,16 +118,15 @@
   align-items: center;
   margin-top: 10px;
 }
-.lot__list-heading {
-  font-size: 16px;
-}
 .lot__progress-steps {
-  display: none;
   height: 400px !important;
   padding-left: 5px;
 }
-.lot__progress-steps.is-active {
-  display: flex;
+.lot__progress-steps-wrapper {
+  display: none !important;
+}
+.lot__progress-steps-wrapper.is-active {
+  display: flex !important;
 }
 .lot__progress-steps__btn {
   margin-top: 10px;
@@ -605,15 +608,15 @@
 .lot__review-video {
   border-radius: 10px;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .lot__review-video-wrapper {
   position: relative;
   flex: 1 1 45%;
-  height: 500px;
+  max-height: 500px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
@@ -632,4 +635,100 @@
           transform: scale(1.5);
   opacity: 0;
   visibility: hidden;
+}
+
+@media (max-width: 1023px) {
+  .lot__col1, .lot__col2 {
+    flex: 1 1 100%;
+    margin: 0;
+  }
+  .lot__col1 {
+    flex-direction: column;
+  }
+  .lot__col2 {
+    margin-top: 25px;
+  }
+  .lot__card-btn {
+    order: -1;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .lot__card-text {
+    margin: 30px 0 0 0;
+  }
+  .lot__main {
+    flex-wrap: wrap;
+  }
+  .lot__autoclick {
+    width: auto;
+  }
+  .lot__review {
+    margin-top: 100px;
+    width: 60%;
+    position: relative;
+    flex-direction: column;
+  }
+  .lot__review-text {
+    margin-right: 0;
+  }
+  .lot__review-video-wrapper {
+    margin-bottom: 0;
+  }
+  .lot__review-date {
+    max-width: 40%;
+    align-self: end;
+    text-align: right;
+  }
+  .lot__review-title {
+    position: absolute;
+    top: -60px;
+    left: 0;
+  }
+  .lot__review-email {
+    max-width: 40%;
+    word-break: break-word;
+    top: 25px;
+    left: 25px;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.07em;
+    background: none;
+    padding: 0;
+  }
+  .lot__review-email:before {
+    border: 10px solid #00a76b;
+  }
+}
+@media (max-width: 540px) {
+  .lot__review {
+    width: 100%;
+  }
+  .lot__col1 {
+    padding-bottom: 90px;
+  }
+  .lot__card-heading {
+    flex-direction: column;
+  }
+  .lot__card-heading-places {
+    order: -1;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+  .lot__card-heading-places span {
+    display: inline-block;
+    margin: 0 0 0 15px;
+  }
+  .lot__nav {
+    position: relative;
+  }
+  .lot__autoclick {
+    position: absolute;
+    left: 25px;
+    top: -610px;
+    width: calc(100% - 50px);
+  }
 }

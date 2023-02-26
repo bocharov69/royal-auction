@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //sidebar menu collapse on 1279px
     const sidebar = document.querySelector(".sidebar");
-    const expand_btn = document.querySelector(".sidebar__expand-btn");
+    const expand_btn = document.querySelector("#header__menu-link--burger");
     if (expand_btn.style.display != 'none') {
         expand_btn.addEventListener("click", function () {
             sidebar.classList.toggle('is-collapsed');

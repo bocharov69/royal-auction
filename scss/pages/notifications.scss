@@ -27,6 +27,7 @@
     &-title {
         font-weight: 500;
         font-size: 18px;
+        line-height: 1.3;
         text-transform: uppercase;
         color: #2f53ff;
     }
@@ -95,6 +96,7 @@
     }
 
     &-img {
+        position: relative;
         flex: 0 1 10%;
         background: rgba(255, 255, 255, 0.07);
         border-radius: 10px;
@@ -103,8 +105,12 @@
         align-self: start;
         padding: 10px 10px;
         &:not(.notifications-card-awardimg) img {
+            min-width: 100%;
+            min-height: 100%;
             width: 100%;
             height: 100%;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: cover;
         }
         &.notifications-card-awardimg {
@@ -125,13 +131,44 @@
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .notifications-card {
         &-img {
-            display: none;
+            flex: 1 1 30%;
+        }
+    }
+}
+@media (max-width: 424px) {
+    .notifications-card {
+        flex-wrap: wrap;
+        &-wrapper {
+            padding: 40px 20px 20px!important;
+        }
+        &-img {
+            order: -2;
+            flex: 0 0 auto;
+            width: 65px;
+            height: 65px;
+            img {
+                padding-bottom: 0 !important;
+                max-height: calc(100% - 20px) !important;
+            }
         }
         &-text {
-            margin-left: 0;
+            flex: 1 1 auto;
+            margin: 25px 0 0 !important;
+        }
+        &-title {
+            position: absolute;
+            max-width: 40%;
+            top: 0;
+            left: 75px;
+        }
+        &-content {
+            margin-top: 0;
+        }
+        &-date {
+            order: -1;
         }
     }
 }

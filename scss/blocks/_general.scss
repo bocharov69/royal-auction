@@ -125,7 +125,7 @@ h6 {
     width: 50% !important;
     margin: 0 auto 80px !important;
     &:before {
-        content: 'Далее >';
+        content: "Далее >";
         display: block;
     }
     &[aria-disabled="true"]:before {
@@ -137,7 +137,25 @@ h6 {
     bottom: 30px !important;
 }
 
+.list {
+    padding: 0 20px 20px 0;
+    overflow: auto;
 
+    scrollbar-width: thin;
+    scrollbar-color: #a9a9a9 #2f3032;
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #2f3032;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #bbbbbb;
+        border-radius: 10px;
+        border: 0px none #000000;
+    }
+}
 .logo {
     display: flex;
     align-items: center;
@@ -186,7 +204,10 @@ h6 {
         color: rgba(255, 255, 255, 0.4);
         background: rgba(47, 83, 255, 0.2);
         &:hover {
-            box-shadow: none;
+            box-shadow: none !important;
+            color: rgba(255, 255, 255, 0.4) !important;
+            border: none;
+            background: rgba(47, 83, 255, 0.2) !important;
         }
     }
 }
@@ -333,6 +354,7 @@ h6 {
 .list-smp {
     font-weight: 300;
     font-size: 12px;
+    line-height: 1.4;
 }
 .gray-btn {
     display: inline-block;
@@ -445,6 +467,7 @@ h6 {
         flex-direction: column;
         max-width: calc(100vw + 150px);
         max-height: 320px;
+        
         overflow: auto;
 
         scrollbar-width: thin;
@@ -475,6 +498,7 @@ h6 {
         flex: 1 1 15%;
         &.partner-table-td--user {
             flex: 1 1 20%;
+            padding-left: 0;
         }
         &.partner-table-td--lossall {
             flex: 1 1 10%;
@@ -491,6 +515,7 @@ h6 {
         flex: 1 1 15%;
         &.partner-table-th--user {
             flex: 1 1 20%;
+            padding-left: 0;
         }
         &.partner-table-th--lossall {
             flex: 1 1 10%;
@@ -514,7 +539,8 @@ h6 {
         }
     }
     &-td--regdate {
-        &-days {
+        &-days,
+        &-time {
             color: rgba(255, 255, 255, 0.4);
             font-size: 10px;
         }
@@ -597,7 +623,7 @@ h6 {
 }
 .user-country-select {
     font-size: 0;
-    padding: 10px 45px 10px 0px !important;
+    padding: 10px 30px 10px 0px !important;
     color: rgba(255, 255, 255, 0.4) !important;
     overflow: hidden;
 
@@ -703,14 +729,16 @@ h6 {
 
 @media (max-width: 1279px) {
     .main {
-        overflow-x: visible;
-    }
-    .main {
-        margin: 0 0 0 73px;
+        //overflow-x: visible;
+        //margin: 0 0 0 73px;
+        margin: 0;
+        padding: 0 25px;
     }
     .page {
-        width: 100vw;
-        padding: 0 15px 0 30px;
+        //width: 100vw;
+        //padding: 0 15px 0 30px;
+        padding: 0;
+        margin-top: 110px;
     }
     .page__heading {
         position: relative;
@@ -725,6 +753,9 @@ h6 {
         &-wrapper {
             padding-right: 0;
             padding-left: 35px;
+            & > .line-separator {
+                margin-left: -35px !important;
+            }
         }
         &-nav {
             flex-wrap: wrap;
@@ -735,6 +766,9 @@ h6 {
             &-radio {
                 flex: 0 1 100%;
                 margin: 12px 0 0 20px;
+            }
+            &-select {
+                font-size: 11px !important;
             }
         }
         &-heading {

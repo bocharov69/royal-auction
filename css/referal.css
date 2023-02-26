@@ -13,6 +13,7 @@
 }
 .row1__col1 .gray-btn {
   margin-left: auto;
+  text-align: center;
 }
 .row1__col1__user-info {
   margin: 0 30px 0 20px;
@@ -91,8 +92,12 @@
 .row2__col__img {
   padding: 12px;
   margin-right: 15px;
+  min-width: 48px;
+  min-height: 48px;
   width: 48px;
   height: 48px;
+  max-width: 48px;
+  max-height: 48px;
   background: rgba(47, 83, 255, 0.2);
   border-radius: 12px;
 }
@@ -115,7 +120,6 @@
   margin-right: 15px;
 }
 .row2__col__key {
-  font-size: 16px;
   margin-bottom: 10px;
 }
 .row2__col__value {
@@ -231,13 +235,15 @@
 .row5__col3 {
   flex: 1 1 45%;
   margin: 10px;
-  padding: 35px 35px 25px;
   display: flex;
   flex-direction: column;
 }
+.row5__col3__heading {
+  margin-bottom: 25px;
+}
 .row5__col3__list {
   margin: auto 0;
-  overflow: auto;
+  max-height: 500px;
 }
 .row5__col3__list-item {
   display: flex;
@@ -325,15 +331,9 @@
     flex: 1 1 100%;
     max-height: 200px;
   }
-  .row4 .donutchart-container {
-    margin-left: 30px;
-  }
   .row4 .donutchart svg {
-    max-width: 80px;
-    max-height: 80px;
-  }
-  .row4 .donutchart-text {
-    font-size: 19px;
+    max-width: 140px;
+    max-height: 140px;
   }
   .row5 {
     display: block;
@@ -345,11 +345,46 @@
     height: 400px;
   }
 }
+@media (max-width: 767px) {
+  .row4__col1 {
+    flex: 1 1 100%;
+  }
+  .row4 .donutchart-content {
+    flex-direction: column;
+  }
+  .row4 .donutchart-container {
+    margin-bottom: 30px;
+    order: -1;
+    align-self: center;
+  }
+  .row4 .donutchart-text {
+    font-size: 19px;
+  }
+  .row4__col2 .user-avatar-wrapper,
+.row5__col3 .user-avatar-wrapper {
+    min-width: 35px;
+    max-width: 35px;
+    min-height: 35px;
+    max-height: 35px;
+  }
+  .row4__col2 .list-p,
+.row5__col3 .list-p {
+    margin: 0 15px;
+    font-size: 18px;
+  }
+}
 @media (max-width: 540px) {
+  .row1__col1__user-avatar-wrapper {
+    min-width: 80px !important;
+    max-width: 80px !important;
+    min-height: 80px !important;
+    max-height: 80px !important;
+  }
   .row1__col1__user-info {
-    margin: 0 0 0 auto;
+    margin: 0 0 0 30px;
   }
   .row1__col1 .gray-btn {
+    flex: 0 0 100%;
     margin-top: 20px;
   }
 }

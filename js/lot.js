@@ -26,8 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         centeredSlides: true,
         initialSlide: initial_slide,
         speed: 300,
-        slideToClickedSlide: true,
-        allowTouchMove: false,
         watchOverflow: false,
         loop: false,
         autoHeight: true,
@@ -36,6 +34,28 @@ document.addEventListener("DOMContentLoaded", function () {
         observeSlideChildren: true,
     });
 
+    if (document.querySelector('.lot__list-members') && document.querySelector('.lot__list-members').classList.contains('is-active'))
+        document.querySelector('.lot__col2-heading').textContent = "Список участников:";
+
+    if (document.querySelector('.lot__list-clicks') && document.querySelector('.lot__list-clicks').classList.contains('is-active'))
+        document.querySelector('.lot__col2-heading').textContent = "Исторяи кликов:";
+
+    if (document.querySelector('.lot__progress-steps') && document.querySelector('.lot__progress-steps-wrapper').classList.contains('is-active')) {
+        document.querySelector('.lot__col2-heading').textContent = "Статус заказа:";
+
+        if (window.innerWidth <= 540)
+            document.querySelector('.lot__autoclick').style.top = "-100px";
+        window.addEventListener("resize", function () {
+            if (window.innerWidth <= 540)
+                document.querySelector('.lot__autoclick').style.top = "-100px";
+        });
+        if (window.innerWidth <= 1023)
+            document.querySelector('.lot__col2').style = 'order: -1; margin: 0 0 30px 0;';
+        window.addEventListener("resize", function () {
+            if (window.innerWidth <= 1023)
+                document.querySelector('.lot__col2').style = 'order: -1; margin: 0 0 30px 0;';
+        });
+    }
 
     //copy tracknum
     const tracknum = document.querySelector(".lot__progress-steps__tracknum");

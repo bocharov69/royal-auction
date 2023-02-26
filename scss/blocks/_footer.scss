@@ -2,6 +2,11 @@
     position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.4);
     padding: 47px 0 37px 20px;
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
     &__menu {
         position: relative;
         display: flex;
@@ -37,7 +42,7 @@
                 margin: 0 0 0 10px;
             }
         }
-    }
+    } 
 
     &__copyright {
         position: absolute;

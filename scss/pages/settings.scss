@@ -31,6 +31,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        &-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-text-delete {
+            align-self: start;
+            font-weight: 300;
+            font-size: 12px;
+            text-decoration: underline;
+            color: rgba(255, 255, 255, 0.4) !important;
+        }
         .gray-btn {
             width: 100%;
             margin-top: 30px;
@@ -113,8 +124,12 @@
         &__img {
             padding: 12px;
             margin-right: 15px;
+            min-width: 48px;
+            min-height: 48px;
             width: 48px;
             height: 48px;
+            max-width: 48px;
+            max-height: 48px;
             background: rgba(47, 83, 255, 0.2);
             border-radius: 12px;
 
@@ -149,7 +164,6 @@
     }
 }
 
-
 .settings {
     &-heading {
         font-size: 18px;
@@ -177,9 +191,9 @@
         display: flex;
         flex-wrap: wrap;
         &-item {
-            flex: 1 0 24%;
+            flex: 1 0 22%;
             input {
-                width: 100%
+                width: 100%;
             }
             &:last-child {
                 flex: 0 1 10%;
@@ -207,14 +221,14 @@
                     position: absolute;
                     left: 2px;
                     top: 2px;
-                    background: #FFF;
+                    background: #fff;
                     width: 20px;
-                    height: 20px;  
+                    height: 20px;
                     border-radius: 50%;
                     transition: 0.2s ease;
                 }
                 &:checked {
-                    background: #2F53FF;
+                    background: #2f53ff;
                     &:before {
                         left: 18px;
                     }
@@ -237,11 +251,11 @@
         &-item {
             flex: 1 1 40%;
             input {
-                width: 100%
+                width: 100%;
             }
             input#settings-cardchange--cardexp {
                 letter-spacing: 0.2em;
-            }   
+            }
             &:first-child {
                 flex: 1 1 100%;
             }
@@ -259,13 +273,26 @@
     margin-top: 10px;
 }
 
-
 @media (max-width: 1279px) {
     .settings {
         &-useradress {
             &-item {
                 flex: 1 0 40%;
+                &:last-child {
+                    flex: 0 1 20%;
+                }
             }
         }
+    }
+}
+@media (max-width: 1023px) {
+    .row1__cols23 {
+        flex: 0 1 100%;
+        order: -1;
+    }
+}
+@media (max-width: 767px) {
+    .row__col {
+        padding: 25px !important;
     }
 }

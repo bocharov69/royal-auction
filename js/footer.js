@@ -1,6 +1,12 @@
 document.write(`
 <footer class="footer">
-    <nav>
+    <nav> 
+        <div class="logo">
+            <a href="index.html" class="logo-img">
+                <img src="./img/logo.svg" alt="">
+            </a>
+            <h2 class="logo-text">ROYAL<br>AUCTION</h2>
+        </div>
         <ul class="footer__menu">
             <li class="footer__menu-item"><a href="publicoffer.html" class="footer__menu-link">Публичная оферта</a></li>
             <li class="footer__menu-item"><a href="terms.html" class="footer__menu-link">Пользовательское соглашение</a></li>

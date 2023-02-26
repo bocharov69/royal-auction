@@ -1,4 +1,5 @@
-document.write(`<aside class="sidebar">
+document.write(`
+<aside class="sidebar"> 
     <div class="sidebar__wrapper">
         <div class="logo">
             <a href="index.html" class="logo-img">
@@ -6,7 +7,6 @@ document.write(`<aside class="sidebar">
             </a>
             <h2 class="logo-text">ROYAL<br>AUCTION</h2>
         </div>
-        <button class="sidebar__expand-btn"></button>
         <nav>
             <ul class="sidebar__menu">
                 <li>

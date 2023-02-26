@@ -1,8 +1,8 @@
-document.write(`
-<header>
+document.write(` 
+<header class="header">
     <nav>
         <ul class="header__menu">
-            <li class="header__menu-item-wrapper">
+            <li class="header__menu-item-wrapper header__menu-item-tockens-wrapper">
                 <a href="tockens.html" class="header__menu-item" id="header__menu-link--tockens">
                     <div class="header__menu-item-img" style="margin-right: 7px">
                         <img src="./img/logo.svg" alt="">
@@ -92,7 +92,7 @@ document.write(`
                     <div class="header-notification-unread unread"></div>
                 </a>
             </li>
-            <li class="header__menu-item-wrapper">
+            <li class="header__menu-item-wrapper header__menu-item-profile-wrapper">
                 <a href="profile.html" class="header__menu-item" id="header__menu-link--profile">
                     Nickname
                     <div class="header__menu-item-img user-avatar-wrapper">
@@ -106,6 +106,9 @@ document.write(`
                         <img src="./img/icons/nav/logout.svg" alt="">
                     </div>
                 </a>
+            </li>
+            <li class="header__menu-item-wrapper">
+                <a href="##" class="header__menu-item" id="header__menu-link--burger"></a>
             </li>
         </ul>
     </nav>

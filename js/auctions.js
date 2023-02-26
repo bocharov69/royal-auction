@@ -4,7 +4,7 @@ const auc_category_slider = new Swiper('.auction__categories-wrapper', {
     slidesPerView: '1',
     speed: 500,
     spaceBetween: 15,
-    autoHeight: true,
+    autoHeight: false,
     observer: true,
     observeParents: true,
     pagination: {

@@ -35,10 +35,12 @@
             display: flex;
             justify-content: space-between;
             font-weight: 300;
+            line-height: 1.4;
             span {
                 font-weight: 600;
                 font-size: 28px;
                 margin-left: 15px;
+                white-space: nowrap;
             }
         }
         &-progressbar {
@@ -182,6 +184,7 @@
     }
 
     &__col4 {
+        position: relative;
         flex: 1 1 30%;
         border: 1px solid #2f53ff;
 
@@ -194,6 +197,44 @@
         &-paragraph {
             font-weight: 300;
             line-height: 1.5;
+        }
+        &-spoiler {
+            display: none;
+            position: absolute;
+            bottom: 25px;
+            right: 30px;
+            align-items: center;
+            justify-content: end;
+            text-decoration-line: underline;
+            color: rgba(255, 255, 255, 0.4);
+            padding-right: 20px;
+            &:before {
+                content: "";
+                position: absolute;
+                right: 5px;
+                width: 1px;
+                height: 8px;
+                border: 1px solid #6d6f74;
+                transform: rotate(-45deg);
+                transition: 0.3s ease;
+            }
+            &:after {
+                content: "";
+                margin-left: 3px;
+                position: absolute;
+                right: 0;
+                width: 1px;
+                height: 8px;
+                border: 1px solid #6d6f74;
+                transform: rotate(45deg);
+                transition: 0.3s ease;
+            }
+            &.is-active:before {
+                transform: rotate(45deg);
+            }
+            &.is-active:after {
+                transform: rotate(-45deg);
+            }
         }
 
         .progress-step {
@@ -301,16 +342,25 @@
     }
 
     &__col3 {
+        position: relative;
         flex: 1 1 30%;
 
-        .tg {
-            max-height: 500px !important;
-            tbody {
-                margin: 0 -20px;
+        .partner-table-td--user, .partner-table-th--user {
+            flex: 1 1 100% !important;
+        }
+        .partner-table-td--regdate {
+            justify-content: start !important;
+            &-time {
+                margin-top: 10px;
             }
-            td {
-                padding: 0 !important;
-                margin: 20px;
+        }
+        .tg {
+            max-height: 425px !important;
+            max-width: 100% !important;
+            padding-right: 20px;
+            
+            td, th {
+                padding: 10px 0 !important;
             }
         }
     }
@@ -352,6 +402,12 @@
                         object-fit: cover;
                     }
                 }
+                &-text span {
+                    display: inline-block;
+                    font-size: 12px;
+                    color: rgba(255, 255, 255, 0.4);
+                    margin-top: 10px;
+                }
             }
         }
 
@@ -387,9 +443,6 @@
 
 @media (max-width: 475px) {
     .row1 {
-        &__col1 {
-            padding: 30px 40px 25px 40px;
-        }
         &__col3 {
             grid-template-columns: repeat(1, 1fr) !important;
         }
@@ -398,8 +451,14 @@
         }
     }
 }
+
 @media (max-width: 767px) {
     .row1 {
+        &__col1 {
+            padding: 30px 40px 20px 25px;
+            border-radius: 8px;
+            box-shadow: inset 0 0 60px #171a1e;
+        }
         &__col3 {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -421,11 +480,48 @@
             grid-row-start: 5;
             grid-row-end: 6;
         }
+        &__col4 {
+            padding-bottom: 50px;
+            max-height: 400px;
+            overflow: hidden;
+            transition: 0.4s ease;
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 150px;
+                z-index: 10;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(23, 26, 30, 1) 60%);
+                transition: 0.4s ease;
+            }
+            &.is-active {
+                max-height: 2000px;
+                &:before {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            &-spoiler {
+                display: flex;
+                z-index: 11;
+            }
+        }
     }
 
     .row2 {
+        &__cols12 {
+            order: 1;
+        }
         &__col1 {
             flex-wrap: wrap;
+        }
+    }
+    .row3 {
+        .row__col__block2 {
+            order: -1;
+            margin: 0 0 30px !important;
         }
     }
 }

@@ -15,6 +15,7 @@
 
         .gray-btn {
             margin-left: auto;
+            text-align: center;
         }
         &__user-info {
             margin: 0 30px 0 20px;
@@ -61,11 +62,7 @@
     padding: 25px;
 
     max-width: 100%;
-    overflow: auto;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
+
     &__col1 {
         flex: 0 1 25%;
         padding-right: 30px;
@@ -122,7 +119,25 @@
     }
     &__col2 {
         flex: 1 1 auto;
-        padding-left: 45px;
+        padding-bottom: 20px;
+        margin-left: 45px;
+        overflow-x: scroll;
+
+        scrollbar-width: thin;
+        scrollbar-color: #a9a9a9 #2f3032;
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #2f3032;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #bbbbbb;
+            border-radius: 10px;
+            border: 0px none #000000;
+        }
+
         &__checklist {
             display: grid;
             grid-row-gap: 15px;
@@ -362,31 +377,73 @@
             grid-column-end: 4;
         }
     }
+}
 
+@media (max-width: 767px) {
     .row4 {
+        &__col1 {
+            padding: 25px 15px 15px;
+        }
         .donutchart-container {
-            margin-left: 30px;
+            order: -1;
         }
         .donutchart svg {
-            max-width: 120px;
-            max-height: 120px;
+            max-width: 140px;
+            max-height: 140px;
+        }
+        .donutchart-content {
+            flex-direction: column;
+            align-items: center;
+        }
+        .donutchart-ul {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+            &-item {
+                &:not(&:first-child) {
+                    margin: 0 0 0 10px !important;
+                }
+            }
         }
     }
 }
+
 @media (max-width: 540px) {
     .row1 {
         &__col1 {
+            &__user-avatar-wrapper {
+                min-width: 80px !important;
+                max-width: 80px !important;
+                min-height: 80px !important;
+                max-height: 80px !important;
+            }
             &__user-info {
-                margin: 0 0 0 auto;
+                margin: 0 0 0 30px;
             }
             .gray-btn {
+                flex: 0 0 100%;
                 margin-top: 20px;
             }
         }
     }
-
+    .row2 {
+        flex-direction: column;
+        &__col1 {
+            padding-right: 0;
+            border: none;
+            &__checklist-award-text {
+                white-space: normal;
+            }
+        }
+        &__col2 {
+            margin: 20px 0 0 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+        }
+    }
     .row3 {
         &__col {
+            padding: 25px 15px;
             grid-column-start: 1;
             grid-column-end: 4;
         }
@@ -399,6 +456,9 @@
                     &:nth-child(1),
                     &:nth-child(2) {
                         display: none;
+                    }
+                    &:last-child {
+                        margin-left: 10px;
                     }
                 }
             }

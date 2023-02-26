@@ -1,12 +1,12 @@
 //user country select
 const country_select = document.querySelector('.user-country-select');
 const country_value = document.querySelectorAll('.user-country-value');
-country_select.style = `background: url("../../img/icons/flags/${country_select.value}.png") left center / 40px 20px no-repeat;`
+country_select.style = `background: url("../../img/icons/flags/${country_select.value}.png") left center / 30px 20px no-repeat;`
 country_value.forEach(element => {
     element.textContent = document.querySelector(`.user-country-option[value="${country_select.value}"]`).textContent;
 });
 country_select.addEventListener("change", function () {
-    country_select.style = `background: url("../../img/icons/flags/${country_select.value}.png") left center / 40px 20px no-repeat;`
+    country_select.style = `background: url("../../img/icons/flags/${country_select.value}.png") left center / 30px 20px no-repeat;`
     country_value.forEach(element => {
         element.textContent = document.querySelector(`.user-country-option[value="${country_select.value}"]`).textContent;
     });

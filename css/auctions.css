@@ -299,7 +299,7 @@
 .auction__card {
   background: #171a1e;
   border-radius: 17px;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
 }
 .auction__card-visual {
@@ -315,8 +315,8 @@
   text-align: center;
 }
 .auction__card-img img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -418,10 +418,14 @@
 .auction__card-date {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 14px;
   font-weight: 300;
 }
 .auction__card-date.is-timer {
+  font-size: 18px;
+  display: block;
+  text-align: center;
   background: #13161a;
   border-radius: 8px;
   padding: 10px;
@@ -455,11 +459,11 @@
   background: #2f53ff;
 }
 
-.auction__category:nth-child(even) .auction__category-top-item:nth-child(3) {
+.auction__category:nth-child(even) .auction__category-top-item:nth-child(1) {
   background: #1b264b;
 }
 
-.auction__category:nth-child(odd) .auction__category-top-item:nth-child(2) {
+.auction__category:nth-child(odd) .auction__category-top-item:nth-child(1) {
   background: #1b264b;
 }
 
@@ -471,7 +475,7 @@
   background: #163d4b;
 }
 
-.auction__category:nth-child(odd) .auction__category-top-item:nth-child(3) {
+.auction__category:nth-child(odd) .auction__category-top-item:nth-child(2) {
   background: #163d4b;
 }
 
@@ -483,7 +487,7 @@
   background: #414758;
 }
 
-.auction__category:nth-child(odd) .auction__category-top-item:nth-child(2) {
+.auction__category:nth-child(odd) .auction__category-top-item:nth-child(3) {
   background: #414758;
 }
 
@@ -503,7 +507,7 @@
   background: #272a2e;
 }
 
-.auction__category:nth-child(even) .auction__category-top-item:nth-child(3) {
+.auction__category:nth-child(even) .auction__category-top-item:nth-child(1) {
   background: #3c2834;
 }
 
