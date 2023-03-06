@@ -336,6 +336,10 @@
   position: relative;
   flex: 1 1 30%;
 }
+.row2__col3-heading {
+  font-size: 24px;
+  margin-bottom: 35px;
+}
 .row2__col3 .partner-table-td--user, .row2__col3 .partner-table-th--user {
   flex: 1 1 100% !important;
 }
@@ -346,7 +350,7 @@
   margin-top: 10px;
 }
 .row2__col3 .tg {
-  max-height: 425px !important;
+  max-height: 370px !important;
   max-width: 100% !important;
   padding-right: 20px;
 }
@@ -469,6 +473,9 @@
   }
   .row1__col3 {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .row1__col3__block-text {
+    font-size: 12px !important;
   }
   .row1__col3__block1 {
     flex-direction: column;

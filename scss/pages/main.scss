@@ -344,7 +344,10 @@
     &__col3 {
         position: relative;
         flex: 1 1 30%;
-
+        &-heading {
+            font-size: 24px;
+            margin-bottom: 35px;
+        }
         .partner-table-td--user, .partner-table-th--user {
             flex: 1 1 100% !important;
         }
@@ -355,7 +358,7 @@
             }
         }
         .tg {
-            max-height: 425px !important;
+            max-height: 370px !important;
             max-width: 100% !important;
             padding-right: 20px;
             
@@ -461,6 +464,9 @@
         }
         &__col3 {
             grid-template-columns: repeat(2, 1fr);
+            &__block-text {
+                font-size: 12px !important;
+            }
         }
         &__col3__block1 {
             flex-direction: column;

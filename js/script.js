@@ -313,25 +313,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
                     let yTick = document.createElement('div');
-                    let yTick_line = document.createElement('div');
                     yTick.classList.add('barchart-yAxis-tick');
-                    yTick.textContent = data[i][1];
                     yTick.style.position = 'absolute';
                     yTick.style.width = '100%';
                     yTick.style.top = (yAxis.offsetHeight - 10 - data[i][1] * yScale) - 6 + 'px';
-                    yTick.style.left = -(data[i][1].toString().length + 1) + 'ch';
-                    yTick.style.fontWeight = '300';
-                    yTick.style.fontSize = '12px';
-                    yTick.style.color = 'rgba(255,255,255,0.1)';
+                    yTick.style.left = 0;
+                    yTick.style.height = '0.5px';
+                    yTick.style.width = '100%';
+                    yTick.style.backgroundColor = 'rgba(255,255,255,0.1)';
 
-                    yTick_line.style.position = 'absolute';
-                    yTick_line.style.left = `${(data[i][1].toString().length + 1 + 'ch')}`;
-                    yTick_line.style.top = '50%';
-                    yTick_line.style.transform = 'translateY(-50%)';
-                    yTick_line.style.backgroundColor = 'rgba(255,255,255,0.1)';
-                    yTick_line.style.height = '0.5px';
-                    yTick_line.style.width = '100%';
-                    yTick.appendChild(yTick_line);
                     barchart.appendChild(yTick);
 
                     totalProfit = totalProfit + data[i][1];

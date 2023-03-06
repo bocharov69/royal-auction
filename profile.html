@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script src="./js/swiper-bundle.min.js"></script>
     <title>Личный кабинет</title>
 </head>
 
@@ -72,8 +74,9 @@
                     <article class="row2">
                         <div class="row2__col1">
                             <div class="row2__col1__checklist-visual">
-                                <p style="font-size: 20px; margin-bottom: 20px;">Чек-лист ></p>
-                                <p style="font-weight: 300; font-size: 12px;">Прежде чем ты начнёшь учавствовать в
+                                <p style="font-size: 20px; margin-bottom: 20px;">Чек-лист&nbsp&nbsp&nbsp></p>
+                                <p style="font-weight: 300; font-size: 12px; line-height: 1.5;">Прежде чем ты начнёшь
+                                    учавствовать в
                                     аукционе, выполни все задания:</p>
                                 <div class="row2__col1__checklist-img"><img src="./img/checklist.png" alt=""></div>
                                 <div class="row2__col1__checklist-award-info">
@@ -82,139 +85,167 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row2__col2">
-                            <ul class="row2__col2__checklist">
-                                <li class="row2__col2__checklist-item is-checked">
-                                    <img src="./img/icons/checkboxes/ch1.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Изучите информацию</p><br>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            о проекте
-                                        </a>
+                        <div class="row2__col2 swiper">
+                            <ul class="row2__col2__checklist swiper-wrapper">
+                                <div class="row2__col2__checklist-slide swiper-slide">
+                                    <div class="row2__col2__checklist-slide-wrapper">
+                                        <li class="row2__col2__checklist-item is-checked">
+                                            <img src="./img/icons/checkboxes/ch1.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Изучите информацию</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    о проекте
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch2.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Пройдите верификацию аккаунта</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    на странице профиля
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch3.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Подпишитесь на официальный аккаунт в</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    Instagram
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch4.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Подпишитесь на официальный</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    telegram канал
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch5.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Подключите</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    telegram bot
+                                                </a>
+                                                <p>для получения уведомлений</p>
+                                            </div>
+                                        </li>
                                     </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch2.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Пройдите верификацию аккаунта</p><br>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            на странице профиля
-                                        </a>
+                                </div>
+                                <div class="row2__col2__checklist-slide swiper-slide">
+                                    <div class="row2__col2__checklist-slide-wrapper">
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch6.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Ознакомьтесь с</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    лентой победителей
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch7.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Изучите</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    тактику победы
+                                                </a>
+                                                <p>в аукционах</p>
+                                            </div>
+                                        </li>
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch8.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Выберите и оплатите</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    пакет токенов
+                                                </a>
+                                                <p>для участия в аукционах</p>
+                                            </div>
+                                        </li>
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch9.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Выберите</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    аукцион
+                                                </a>
+                                                <p>и примите в нем участие</p>
+                                            </div>
+                                        </li>
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch10.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Вступите в</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    чат игроков
+                                                </a>
+                                            </div>
+                                        </li>
                                     </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch3.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Подпишитесь на официальный аккаунт в</p><br>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            Instagram
-                                        </a>
+                                </div>
+                                <div class="row2__col2__checklist-slide swiper-slide">
+                                    <div class="row2__col2__checklist-slide-wrapper">
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch11.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Ознакомьтесь с условиями</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    партнерской программы
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch12.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Вступите в</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    чат партнёров
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch13.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Порекомендуйте участие в аукционе в</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    социальных сетях
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="row2__col2__checklist-item">
+                                            <img src="./img/icons/checkboxes/ch14.svg"
+                                                class="row2__col2__checklist-item-img">
+                                            <div class="row2__col2__checklist-item-text">
+                                                <p>Выведите</p>
+                                                <a href="##" class="row2__col2__checklist-item-link">
+                                                    партнёрские вознаграждения
+                                                </a>
+                                            </div>
+                                        </li>
                                     </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch4.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Подпишитесь на официальный</p><br>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            telegram канал
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch5.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Подключите</p>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            telegram bot
-                                        </a><br>
-                                        <p>для получения уведомлений</p>
-                                    </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch6.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Ознакомьтесь с</p><br>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            лентой победителей
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch7.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Изучите</p>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            тактику победы
-                                        </a><br>
-                                        <p>в аукционах</p>
-                                    </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch8.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Выберите и оплатите</p><br>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            пакет токенов
-                                        </a><br>
-                                        <p>для участия в аукционах</p>
-                                    </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch9.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Выберите</p>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            аукцион
-                                        </a><br>
-                                        <p>и примите в нем участие</p>
-                                    </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch10.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Вступите в</p>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            чат игроков
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch11.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Ознакомьтесь с условиями</p><br>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            партнерской программы
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch12.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Вступите в</p>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            чат партнёров
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch13.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Порекомендуйте участие в аукционе в</p><br>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            социальных сетях
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="row2__col2__checklist-item">
-                                    <img src="./img/icons/checkboxes/ch14.svg" class="row2__col2__checklist-item-img">
-                                    <div class="row2__col2__checklist-item-text">
-                                        <p>Выведите</p><br>
-                                        <a href="##" class="row2__col2__checklist-item-link">
-                                            партнёрские вознаграждения
-                                        </a>
-                                    </div>
-                                </li>
+                                </div>
                             </ul>
+                            <div class="row2__col2-pagination swiper-pagination"></div>
+                            <div class="row2__col2-scrollbar swiper-scrollbar"></div>
                         </div>
                     </article>
 
@@ -351,13 +382,9 @@
                             <div class="barchart-wrapper">
                                 <div class="barchart-nav">
                                     <p class="barchart-nav-title">Прибыль</p>
-                                    <select class="barchart-nav-select">
-                                        <option value="week" class="barchart-nav-option">За последнюю неделю</option>
-                                        <option value="month" class="barchart-nav-option">За последний месяц</option>
-                                    </select>
                                     <div class="barchart-nav-radio">
                                         <input type="radio" name="currency" value="roto" checked
-                                            class="barchart-nav-radio-btn currency--roto" >
+                                            class="barchart-nav-radio-btn currency--roto">
                                         <label class="barchart-nav-radio-label">ROTO</label>
                                     </div>
                                     <div class="barchart-nav-radio">
@@ -367,12 +394,19 @@
                                     </div>
                                 </div>
                                 <div class="line-separator"></div>
-                                <div class="barchart-heading">
+                                <div class="barchart-headingselect">
                                     <p class="barchart-heading-legend"></p>
-                                    <p class="barchart-heading-total">Всего заработано за период: <span
-                                            class="barchart-heading-total-span"></span></p>
+                                    <select class="barchart-nav-select">
+                                        <option value="week" class="barchart-nav-option">За последнюю неделю</option>
+                                        <option value="month" class="barchart-nav-option">За последний месяц</option>
+                                    </select>
                                 </div>
                                 <div class="barchart">
+                                </div>
+                                <div class="barchart-heading">
+                                    <p class="barchart-heading-total">Всего заработано за период:
+                                        <span class="barchart-heading-total-span"></span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -384,15 +418,7 @@
         </div>
     </div>
     <script src="./js/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var checkbox_items = document.querySelectorAll('.row2__col2__checklist-item');
-            checkbox_items.forEach(element => {
-                if (element.classList.contains('is-checked'))
-                    element.querySelector('.row2__col2__checklist-item-img').src = "./img/icons/checkboxes/checked.svg";
-            });
-        });
-    </script>
+    <script src="./js/profile.js"></script>
 </body>
 
 </html>

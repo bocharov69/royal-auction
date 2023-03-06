@@ -13,7 +13,7 @@ const auc_category_slider = new Swiper('.auction__categories-wrapper', {
         clickable: true,
     },
     breakpoints: {
-        1280: {
+        1600: {
             slidesPerView: '3',
         },
         768: {

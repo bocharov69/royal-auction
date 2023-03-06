@@ -252,6 +252,7 @@ h6 {
     }
 }
 .page__tab-btn {
+    user-select: none;
     color: #fff;
     background: none;
     padding: 12px 25px;
@@ -260,7 +261,7 @@ h6 {
     border: 1px solid rgba(255, 255, 255, 0.4);
     &.is-active {
         background: #2f53ff;
-        border: none;
+        border: 1px solid #2f53ff;
     }
 }
 .page__heading {
@@ -466,6 +467,7 @@ h6 {
         display: flex;
         flex-direction: column;
         max-width: calc(100vw + 150px);
+        padding-right: 15px;
         max-height: 320px;
         
         overflow: auto;
@@ -511,6 +513,7 @@ h6 {
         color: rgba(255, 255, 255, 0.4);
         word-break: normal;
         text-align: left;
+        cursor: pointer;
 
         flex: 1 1 15%;
         &.partner-table-th--user {
@@ -641,17 +644,22 @@ h6 {
         flex-direction: column;
         width: 100%;
         height: 100%;
-        padding: 0px 15px 40px 55px;
-        & > .line-separator {
-            margin-left: -55px;
+        padding: 0 15px;
+        & > *:not(*.barchart) {
+            margin-left: -15px;
+            margin-right: -15px;
         }
+    }
+    &-headingselect {
+        display: flex;
+        margin: 25px 0 50px;
     }
     &-nav {
         display: flex;
         align-items: center;
-        margin: 0 0 25px -55px;
+        margin: 0 0 25px 0;
         &-title {
-            margin-right: 30px;
+            margin-right: auto;
         }
         &-select {
             margin: 0 5px 0 auto;
@@ -701,9 +709,7 @@ h6 {
         }
     }
     &-heading {
-        display: flex;
-        margin: 25px 0 50px -55px;
-        justify-content: space-between;
+        margin: 50px 0 0 0;
         &-legend {
             font-weight: 500;
             position: relative;
@@ -720,9 +726,14 @@ h6 {
                 margin-right: 8px;
             }
         }
-        &-total,
-        &-total span {
+        &-total {
+            display: flex;
+            justify-content: space-between;
             color: #f2ae14;
+            span {
+                color: inherit;
+                text-align: right;
+            }
         }
     }
 }
@@ -752,27 +763,16 @@ h6 {
     .barchart {
         &-wrapper {
             padding-right: 0;
-            padding-left: 35px;
-            & > .line-separator {
-                margin-left: -35px !important;
+            padding-left: 0;
+            & > *:not(*.barchart) {
+                margin-left: 0;
+                margin-right: 0;
             }
         }
         &-nav {
-            flex-wrap: wrap;
-            padding-left: 25px;
-            &-title {
-                margin-right: 5px;
-            }
             &-radio {
-                flex: 0 1 100%;
-                margin: 12px 0 0 20px;
+                margin-left: 30px;
             }
-            &-select {
-                font-size: 11px !important;
-            }
-        }
-        &-heading {
-            padding-left: 25px;
         }
     }
     .page__tab-btn {

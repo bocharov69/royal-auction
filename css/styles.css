@@ -330,6 +330,9 @@ h6 {
 }
 
 .page__tab-btn {
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   color: #fff;
   background: none;
   padding: 12px 25px;
@@ -339,7 +342,7 @@ h6 {
 }
 .page__tab-btn.is-active {
   background: #2f53ff;
-  border: none;
+  border: 1px solid #2f53ff;
 }
 
 .page__heading {
@@ -548,6 +551,7 @@ h6 {
   display: flex;
   flex-direction: column;
   max-width: calc(100vw + 150px);
+  padding-right: 15px;
   max-height: 320px;
   overflow: auto;
   scrollbar-width: thin;
@@ -589,6 +593,7 @@ h6 {
   color: rgba(255, 255, 255, 0.4);
   word-break: normal;
   text-align: left;
+  cursor: pointer;
   flex: 1 1 15%;
 }
 .partner-table .tg th.partner-table-th--user {
@@ -708,18 +713,23 @@ h6 {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 0px 15px 40px 55px;
+  padding: 0 15px;
 }
-.barchart-wrapper > .line-separator {
-  margin-left: -55px;
+.barchart-wrapper > *:not(*.barchart) {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.barchart-headingselect {
+  display: flex;
+  margin: 25px 0 50px;
 }
 .barchart-nav {
   display: flex;
   align-items: center;
-  margin: 0 0 25px -55px;
+  margin: 0 0 25px 0;
 }
 .barchart-nav-title {
-  margin-right: 30px;
+  margin-right: auto;
 }
 .barchart-nav-select {
   margin: 0 5px 0 auto;
@@ -770,9 +780,7 @@ h6 {
   background: url(../img/icons/checkboxes/checkmark.svg) center/contain no-repeat;
 }
 .barchart-heading {
-  display: flex;
-  margin: 25px 0 50px -55px;
-  justify-content: space-between;
+  margin: 50px 0 0 0;
 }
 .barchart-heading-legend {
   font-weight: 500;
@@ -790,8 +798,14 @@ h6 {
   border: 8px solid;
   margin-right: 8px;
 }
-.barchart-heading-total, .barchart-heading-total span {
+.barchart-heading-total {
+  display: flex;
+  justify-content: space-between;
   color: #f2ae14;
+}
+.barchart-heading-total span {
+  color: inherit;
+  text-align: right;
 }
 
 @media (max-width: 1279px) {
@@ -813,27 +827,14 @@ h6 {
 @media (max-width: 424px) {
   .barchart-wrapper {
     padding-right: 0;
-    padding-left: 35px;
+    padding-left: 0;
   }
-  .barchart-wrapper > .line-separator {
-    margin-left: -35px !important;
-  }
-  .barchart-nav {
-    flex-wrap: wrap;
-    padding-left: 25px;
-  }
-  .barchart-nav-title {
-    margin-right: 5px;
+  .barchart-wrapper > *:not(*.barchart) {
+    margin-left: 0;
+    margin-right: 0;
   }
   .barchart-nav-radio {
-    flex: 0 1 100%;
-    margin: 12px 0 0 20px;
-  }
-  .barchart-nav-select {
-    font-size: 11px !important;
-  }
-  .barchart-heading {
-    padding-left: 25px;
+    margin-left: 30px;
   }
   .page__tab-btn {
     padding: 12px;
@@ -998,7 +999,7 @@ h6 {
   top: calc(100% + 15px) !important;
   display: block !important;
   width: 260px !important;
-  height: 310px !important;
+  height: 510px !important;
   padding: 17px;
 }
 .header__menu-item#header__menu-link--notifications .tooltip-text:before {

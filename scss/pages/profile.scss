@@ -59,7 +59,7 @@
     margin-top: 25px;
     background: #171a1e;
     border-radius: 17px;
-    padding: 25px;
+    padding: 25px 35px;
 
     max-width: 100%;
 
@@ -68,10 +68,14 @@
         padding-right: 30px;
         border-right: 1px solid rgba(255, 255, 255, 0.1);
         &__checklist {
+            &-visual {
+                display: flex;
+                flex-direction: column;
+            }
             &-img {
                 position: relative;
                 text-align: center;
-                margin: 25px 0 80px;
+                margin: 30px 0 60px;
                 img {
                     position: relative;
                     z-index: 2;
@@ -98,6 +102,7 @@
                 position: relative;
                 display: flex;
                 align-items: center;
+                margin: 0 auto;
             }
             &-award {
                 white-space: nowrap;
@@ -119,35 +124,39 @@
     }
     &__col2 {
         flex: 1 1 auto;
-        padding-bottom: 20px;
-        margin-left: 45px;
-        overflow-x: scroll;
+        padding-bottom: 20px !important;
+        margin-left: 45px !important;
 
-        scrollbar-width: thin;
-        scrollbar-color: #a9a9a9 #2f3032;
-        &::-webkit-scrollbar {
-            width: 5px;
-            height: 5px;
-        }
-        &::-webkit-scrollbar-track {
-            background: #2f3032;
-        }
-        &::-webkit-scrollbar-thumb {
+        .swiper-scrollbar-drag {
             background-color: #bbbbbb;
-            border-radius: 10px;
-            border: 0px none #000000;
+        }
+        &-pagination {
+            display: none;
         }
 
         &__checklist {
-            display: grid;
-            grid-row-gap: 15px;
-            grid-column-gap: 45px;
-            grid-template-rows: repeat(5, 1fr);
-            grid-auto-flow: column;
+            height: 100% !important;
+            min-width: 0;
+
+            &-slide {
+                min-height: 100%;
+                height: auto !important;
+                max-height: 100%;
+                display: flex !important;
+                justify-content: center;
+                &-wrapper {
+                    min-height: 100%;
+                    max-width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between !important;
+                }
+            }
             &-item {
-                display: inline-flex;
+                display: flex;
                 align-items: center;
-                text-align-last: left;
+                text-align: left;
+                margin-bottom: 20px;
                 &-img {
                     min-width: 20px;
                     max-width: 20px;
@@ -156,14 +165,12 @@
                     margin-right: 15px;
                 }
                 &-text p {
-                    white-space: nowrap;
                     display: inline-block;
-                    line-height: 1.2;
+                    line-height: 1.5;
                     font-weight: 300;
                     color: rgba(255, 255, 255, 0.7);
                 }
                 &-link {
-                    white-space: nowrap;
                     display: inline-block;
                     font-weight: 400;
                     color: #fff;
@@ -408,7 +415,7 @@
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 767px) {
     .row1 {
         &__col1 {
             &__user-avatar-wrapper {
@@ -436,9 +443,16 @@
             }
         }
         &__col2 {
-            margin: 20px 0 0 0;
-            padding-top: 20px;
+            margin: 20px 0 0 0 !important;
+            padding-top: 20px !important;
             border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+            &-pagination {
+                display: block;
+            }
+            &-scrollbar {
+                display: none;
+            }
         }
     }
     .row3 {
@@ -471,5 +485,10 @@
             grid-row-start: 5;
             grid-row-end: 6;
         }
+    }
+}
+@media (min-width: 767px) {
+    .row2__col2__checklist-slide {
+        width: auto !important;
     }
 }

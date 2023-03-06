@@ -129,6 +129,7 @@
             margin-bottom: 10px;
         }
         &__value {
+            font-size: 12px;
             color: rgba(255, 255, 255, 0.4);
             word-break: break-all;
         }
@@ -249,7 +250,7 @@
         }
         &__list {
             margin: auto 0;
-            max-height: 500px;
+            max-height: 700px;
             &-item {
                 display: flex;
                 align-items: center;
@@ -391,12 +392,144 @@
             max-height: 35px;
         }
         .list-p {
-            margin: 0 15px;
-            font-size: 18px;
+            margin: 0 10px;
+            font-size: 14px !important;
+            &:nth-child(3) {
+                font-size: 16px !important;
+            }
         }
     }
 }
 @media (max-width: 540px) {
+    .page__navigation {
+        margin-top: 30px;
+        position: relative;
+        justify-content: space-between;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+    .page__tab-btn {
+        height: 100%;
+        padding: 0 15px 10px 15px !important;
+        margin: 0 !important;
+        border: none !important;
+        border-bottom: 2px solid transparent !important;
+        border-radius: 0 !important;
+        background: none !important;
+        color: #5e6467;
+        &.is-active {
+            border-bottom: 2px solid #2f53ff !important;
+            color: #2f53ff;
+        }
+        &:first-child {
+            flex: 1 1 41.2%;
+        }
+        &:last-child {
+            flex: 1 1 44%;
+        }
+    }
+    .partner-table {
+        padding: 25px 15px;
+        .tg {
+            max-height: 760px;
+        }
+        th:not(.partner-table-th--user) {
+            display: none;
+        }
+        .partner-table-th--user {
+            position: relative;
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &:before {
+                content: "Партнёры";
+                font-size: 20px;
+                color: #fff;
+            }
+        }
+        tr {
+            flex-wrap: wrap;
+            &:not(&:last-child) {
+                padding-bottom: 15px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                margin-bottom: 15px;
+            }
+        }
+        td {
+            flex: 1 1 45% !important;
+            padding: 10px !important;
+        }
+        .user-avatar-wrapper {
+            min-width: 35px;
+            max-width: 35px;
+            min-height: 35px;
+            max-height: 35px;
+        }
+        &-td--lossmonth {
+            margin-top: 25px;
+            &:after {
+                content: 'Потрачено:';
+                position: absolute;
+                top: -15px;
+                display: block;
+                font-size: 12px;
+                margin-bottom: 15px;
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+        &-td--gainmonth {
+            margin-top: 25px;
+            &:after {
+                content: 'Заработано:';
+                position: absolute;
+                top: -15px;
+                display: block;
+                font-size: 12px;
+                margin-bottom: 15px;
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+        &-td--lossmonth, &-td--gainmonth {
+            position: relative;
+            flex-flow: row nowrap !important;
+            
+            &:before {
+                content: "За месяц";
+                margin-right: 10px;
+                font-size: 10px;
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
+        &-td--lossall, &-td--gainall {
+            position: relative;
+            flex-flow: row nowrap !important;
+            &:before {
+                content: "Всего";
+                margin-right: 10px;
+                font-size: 10px;
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
+        &-td--gainall, &-td--gainmonth {
+            text-align: right;
+        }
+        &-td--regdate {
+            text-align: right;
+        }
+        &-td--user {
+            &-info {
+                margin-left: 10px;
+            }
+        }
+    }
     .row1 {
         &__col1 {
             &__user-avatar-wrapper {
@@ -412,6 +545,11 @@
                 flex: 0 0 100%;
                 margin-top: 20px;
             }
+        }
+    }
+    .row2 {
+        .status-label {
+            white-space: nowrap;
         }
     }
 }
